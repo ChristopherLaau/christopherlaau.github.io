@@ -53,6 +53,13 @@
 
   
   <url>
+    <loc>https://christopherrliu.github.io/tags/VPS/</loc>
+    <lastmod>2020-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/tags/C/</loc>
     <lastmod>2020-10-07</lastmod>
     <changefreq>daily</changefreq>
@@ -80,17 +87,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://christopherrliu.github.io/tags/VPS/</loc>
-    <lastmod>2020-10-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
+    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -104,7 +104,7 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
     <lastmod>2020-10-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
