@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://christopherrliu.github.io/2020/10/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-partition-equal-subset-sum/</loc>
+    <lastmod>2020-10-11</lastmod>
+  </url>
+  <url>
     <loc>https://christopherrliu.github.io/2020/10/10/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-linked-list-cycle-ii/</loc>
     <lastmod>2020-10-10</lastmod>
   </url>
