@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-10-16T12:33:14.374Z</updated>
+  <updated>2020-10-17T13:49:26.269Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-n-queens-ii</title>
+    <link href="https://christopherrliu.github.io/2020/10/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-n-queens-ii/"/>
+    <id>https://christopherrliu.github.io/2020/10/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-n-queens-ii/</id>
+    <published>2020-10-17T13:47:58.000Z</published>
+    <updated>2020-10-17T13:49:26.269Z</updated>
+    
+    <content type="html"><![CDATA[<p>more…</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;more…&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="回溯" scheme="https://christopherrliu.github.io/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-squares-of-a-sorted-array</title>
