@@ -26,25 +26,29 @@
 
   <meta name="description" content="题意  英文题意">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每天一道leetcode-swap-nodes-in-pairs">
-<meta property="og:url" content="https://christopherrliu.github.io/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/index.html">
+<meta property="og:title" content="每天一道leetcode-backspace-string-compare">
+<meta property="og:url" content="https://christopherrliu.github.io/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/index.html">
 <meta property="og:site_name" content="Christopherの博客">
 <meta property="og:description" content="题意  英文题意">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://youknow.wang/images/2020/10/13/image.png">
-<meta property="og:image" content="https://youknow.wang/images/2020/10/13/image3967d4660ac17a87.png">
-<meta property="og:image" content="https://youknow.wang/images/2020/10/13/imagec6689a47a56b1533.png">
-<meta property="article:published_time" content="2020-10-13T11:39:13.000Z">
-<meta property="article:modified_time" content="2020-10-13T11:45:06.784Z">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/19/image.png">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/19/image132e7c5f663912db.png">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/19/image0a9cb237ec97cfff.png">
+<meta property="og:image" content="https://pic.leetcode-cn.com/1603076585-eXJKxl-844.%E6%AF%94%E8%BE%83%E5%90%AB%E9%80%80%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.gif">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/19/imageb20ca122ca8e9f55.png">
+<meta property="article:published_time" content="2020-10-19T09:23:12.000Z">
+<meta property="article:modified_time" content="2020-10-19T11:12:43.307Z">
 <meta property="article:author" content="Christopher Liu">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="算法">
+<meta property="article:tag" content="栈">
+<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="字符串">
 <meta property="article:tag" content="面试">
-<meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://youknow.wang/images/2020/10/13/image.png">
+<meta name="twitter:image" content="https://youknow.wang/images/2020/10/19/image.png">
 
-<link rel="canonical" href="https://christopherrliu.github.io/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/">
+<link rel="canonical" href="https://christopherrliu.github.io/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/">
 
 
 <script id="page-configurations">
@@ -57,7 +61,7 @@
   };
 </script>
 
-  <title>每天一道leetcode-swap-nodes-in-pairs | Christopherの博客</title>
+  <title>每天一道leetcode-backspace-string-compare | Christopherの博客</title>
   
 
 
@@ -186,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/">
+    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/myavatar.png">
@@ -199,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          每天一道leetcode-swap-nodes-in-pairs
+          每天一道leetcode-backspace-string-compare
         </h1>
 
         <div class="post-meta">
@@ -210,7 +214,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-10-13 19:39:13 / 修改时间：19:45:06" itemprop="dateCreated datePublished" datetime="2020-10-13T19:39:13+08:00">2020-10-13</time>
+              <time title="创建时间：2020-10-19 17:23:12 / 修改时间：19:12:43" itemprop="dateCreated datePublished" datetime="2020-10-19T17:23:12+08:00">2020-10-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -250,7 +254,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>812</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -271,19 +275,23 @@
       
         <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4>
-<p><img src="https://youknow.wang/images/2020/10/13/image.png" alt="" /></p>
+<p><img src="https://youknow.wang/images/2020/10/19/image.png" alt="" /></p>
 <a id="more"></a>
 <h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4>
-<p><img src="https://youknow.wang/images/2020/10/13/image3967d4660ac17a87.png" alt="" /></p>
-<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
-<p>比较基础的题目，<s>中等的难度名不副实</s>，设置几个指针，分别指向相邻的两个节点，再记录前一个结点和后一个节点，迭代交换即可</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">swapPairs</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        ListNode* first = head;</span><br><span class="line">        ListNode* second = head;</span><br><span class="line">        ListNode* next = head;</span><br><span class="line">        ListNode* pre = <span class="literal">nullptr</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(head &amp;&amp; head-&gt;next) second = head-&gt;next;</span><br><span class="line">        <span class="keyword">else</span> second = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">if</span>(head &amp;&amp; head-&gt;next &amp;&amp; head-&gt;next-&gt;next) next = head-&gt;next-&gt;next;</span><br><span class="line">        <span class="keyword">else</span> next = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">if</span>(second) head = head-&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(second) &#123;</span><br><span class="line">            first-&gt;next = second-&gt;next;</span><br><span class="line">            second-&gt;next = first;</span><br><span class="line">            <span class="keyword">if</span>(pre) pre-&gt;next = second;</span><br><span class="line">            pre = first;</span><br><span class="line">            first = next;</span><br><span class="line">            <span class="keyword">if</span>(first) second = first-&gt;next;</span><br><span class="line">            <span class="keyword">else</span> second = <span class="literal">nullptr</span>;</span><br><span class="line">            <span class="keyword">if</span>(second) next = second-&gt;next;</span><br><span class="line">            <span class="keyword">else</span> next = <span class="literal">nullptr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(first &amp;&amp; pre) pre-&gt;next = first;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="https://youknow.wang/images/2020/10/13/imagec6689a47a56b1533.png" alt="" /></p>
-<h3 id="复杂度分析"><a class="markdownIt-Anchor" href="#复杂度分析"></a> 复杂度分析</h3>
-<h4 id="时间复杂度"><a class="markdownIt-Anchor" href="#时间复杂度"></a> 时间复杂度</h4>
-<p>每个节点处理一次，复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span></p>
-<h4 id="空间复杂度"><a class="markdownIt-Anchor" href="#空间复杂度"></a> 空间复杂度</h4>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></p>
+<p><img src="https://youknow.wang/images/2020/10/19/image132e7c5f663912db.png" alt="" /></p>
+<h3 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h3>
+<h4 id="栈"><a class="markdownIt-Anchor" href="#栈"></a> 栈</h4>
+<p>利用栈来模拟字符串的输入，遇到字符就入栈，遇到<code>#</code>就出栈，最后将栈中的字符输出比较即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; sta;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">backspaceCompare</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">string</span> s, t;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c : S) &#123;</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27;#&#x27;</span> &amp;&amp; sta.size()) sta.pop();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c != <span class="string">&#x27;#&#x27;</span>) sta.push(c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(sta.size()) &#123;</span><br><span class="line">            s += sta.top();</span><br><span class="line">            sta.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c : T) &#123;</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27;#&#x27;</span> &amp;&amp; sta.size()) sta.pop();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c != <span class="string">&#x27;#&#x27;</span>) sta.push(c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(sta.size()) &#123;</span><br><span class="line">            t += sta.top();</span><br><span class="line">            sta.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s == t) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://youknow.wang/images/2020/10/19/image0a9cb237ec97cfff.png" alt="" /></p>
+<p>时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(N + M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>，空间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(N + M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></p>
+<h4 id="双指针"><a class="markdownIt-Anchor" href="#双指针"></a> 双指针</h4>
+<p>用两个指针从后向前遍历字符串，模拟删除的操作，如下图所示：</p>
+<p><img src="https://pic.leetcode-cn.com/1603076585-eXJKxl-844.%E6%AF%94%E8%BE%83%E5%90%AB%E9%80%80%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2.gif" alt="" /></p>
+<p>一旦可删除字符的次数用完就需要比较字符，如果这时字符不相等那么就返回<code>false</code>；另外如果有一个字符串到达结尾另一个没有同样也返回<code>false</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">backspaceCompare</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sn = S.size() - <span class="number">1</span>, swait = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> st = T.size() - <span class="number">1</span>, twait = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(sn &gt;= <span class="number">0</span> || st &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span>(sn &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(S[sn] == <span class="string">&#x27;#&#x27;</span>) &#123;</span><br><span class="line">                    swait++;</span><br><span class="line">                    sn--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(swait &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    swait--;</span><br><span class="line">                    sn--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(st &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(T[st] == <span class="string">&#x27;#&#x27;</span>) &#123;</span><br><span class="line">                    twait++;</span><br><span class="line">                    st--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(twait &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    twait--;</span><br><span class="line">                    st--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(sn &gt;= <span class="number">0</span> &amp;&amp; st &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(S[sn] != T[st]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(sn &gt;= <span class="number">0</span> || st &gt;= <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sn--, st--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://youknow.wang/images/2020/10/19/imageb20ca122ca8e9f55.png" alt="" /></p>
+<p>时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>N</mi><mo>+</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(N + M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>，空间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></p>
 
     </div>
 
@@ -310,12 +318,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span> <a href="/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/">每天一道leetcode-swap-nodes-in-pairs</a></p>
+  <p><span>本文标题:</span> <a href="/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/">每天一道leetcode-backspace-string-compare</a></p>
   <p><span>文章作者:</span> <a href="/" title="访问 Christopher Liu 的个人博客">Christopher Liu</a></p>
-  <p><span>发布时间:</span> 2020年10月13日 - 19:10</p>
-  <p><span>最后更新:</span> 2020年10月13日 - 19:10</p>
-  <p><span>原始链接:</span> <a href="/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/" title="每天一道leetcode-swap-nodes-in-pairs">https://christopherrliu.github.io/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/10/13/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-swap-nodes-in-pairs/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span> 2020年10月19日 - 17:10</p>
+  <p><span>最后更新:</span> 2020年10月19日 - 19:10</p>
+  <p><span>原始链接:</span> <a href="/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/" title="每天一道leetcode-backspace-string-compare">https://christopherrliu.github.io/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/10/19/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-backspace-string-compare/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><!--<i class="fa fa-creative-commons"></i> -->
   <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -341,8 +349,10 @@
           <div class="post-tags">
               <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> C++</a>
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 算法</a>
+              <a href="/tags/%E6%A0%88/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 栈</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 双指针</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 字符串</a>
               <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 面试</a>
-              <a href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 链表</a>
           </div>
 
         
@@ -351,13 +361,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-minimum-absolute-difference-in-bst/" rel="prev" title="每天一道leetcode-minimum-absolute-difference-in-bst">
-      <i class="fa fa-chevron-left"></i> 每天一道leetcode-minimum-absolute-difference-in-bst
+    <a href="/2020/10/18/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-remove-nth-node-from-end-of-list/" rel="prev" title="每天一道leetcode-remove-nth-node-from-end-of-list">
+      <i class="fa fa-chevron-left"></i> 每天一道leetcode-remove-nth-node-from-end-of-list
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/10/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-common-characters/" rel="next" title="每天一道leetcode-find-common-characters">
-      每天一道leetcode-find-common-characters <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -417,7 +424,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text"> 复杂度分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.</span> <span class="nav-text"> 时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.2.</span> <span class="nav-text"> 空间复杂度</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">2.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-number">2.2.</span> <span class="nav-text"> 双指针</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
