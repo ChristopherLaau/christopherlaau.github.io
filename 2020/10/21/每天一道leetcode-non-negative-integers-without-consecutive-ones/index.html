@@ -24,17 +24,27 @@
     var CONFIG = {"hostname":"christopherrliu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="There is no royal road to learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Christopherの博客">
-<meta property="og:url" content="https://christopherrliu.github.io/archives/2020/page/2/index.html">
+  <meta name="description" content="题意  英文题意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天一道leetcode-non-negative-integers-without-consecutive-ones">
+<meta property="og:url" content="https://christopherrliu.github.io/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/index.html">
 <meta property="og:site_name" content="Christopherの博客">
-<meta property="og:description" content="There is no royal road to learning">
+<meta property="og:description" content="题意  英文题意">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/21/imagee98ffe223e559a81.png">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/21/image37dc215232b6ff50.png">
+<meta property="og:image" content="https://youknow.wang/images/2020/10/21/imagece50bec53a11987a.png">
+<meta property="article:published_time" content="2020-10-21T06:23:05.000Z">
+<meta property="article:modified_time" content="2020-10-21T06:29:54.616Z">
 <meta property="article:author" content="Christopher Liu">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="数位dp">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://youknow.wang/images/2020/10/21/imagee98ffe223e559a81.png">
 
-<link rel="canonical" href="https://christopherrliu.github.io/archives/2020/page/2/">
+<link rel="canonical" href="https://christopherrliu.github.io/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/">
 
 
 <script id="page-configurations">
@@ -42,12 +52,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Christopherの博客</title>
+  <title>每天一道leetcode-non-negative-integers-without-consecutive-ones | Christopherの博客</title>
   
 
 
@@ -169,219 +179,192 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/myavatar.png">
+      <meta itemprop="name" content="Christopher Liu">
+      <meta itemprop="description" content="There is no royal road to learning">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Christopherの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          每天一道leetcode-non-negative-integers-without-consecutive-ones
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-21 14:23:05 / 修改时间：14:29:54" itemprop="dateCreated datePublished" datetime="2020-10-21T14:23:05+08:00">2020-10-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="热度" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span id="busuanzi_value_page_pv"></span>
+              <span>℃</span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 19 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>874</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-12T20:56:29+08:00"
-              content="2020-10-12">
-          10-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-minimum-absolute-difference-in-bst/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-minimum-absolute-difference-in-bst</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-11T17:29:25+08:00"
-              content="2020-10-11">
-          10-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-partition-equal-subset-sum/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-partition-equal-subset-sum</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-10T21:05:18+08:00"
-              content="2020-10-10">
-          10-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/10/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-linked-list-cycle-ii/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-linked-list-cycle-ii</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-09T20:52:56+08:00"
-              content="2020-10-09">
-          10-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/09/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-linked-list-cycle/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-linked-list-cycle</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-08T19:38:10+08:00"
-              content="2020-10-08">
-          10-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/08/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reverse-string/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-reverse-string</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-07T16:34:13+08:00"
-              content="2020-10-07">
-          10-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sort-colors/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-sort-colors</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-06T15:09:33+08:00"
-              content="2020-10-06">
-          10-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/06/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sum-of-distances-in-tree/" itemprop="url">
-            <span itemprop="name">每天一道leetcode——sum of distances in tree</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-05T16:25:35+08:00"
-              content="2020-10-05">
-          10-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/05/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPS/" itemprop="url">
-            <span itemprop="name">搭建自己的VPS</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-05T10:24:00+08:00"
-              content="2020-10-05">
-          10-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/05/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+<h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4>
+<p><img src="https://youknow.wang/images/2020/10/21/imagee98ffe223e559a81.png" alt="" /></p>
+<a id="more"></a>
+<h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4>
+<p><img src="https://youknow.wang/images/2020/10/21/image37dc215232b6ff50.png" alt="" /></p>
+<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
+<p>典型的数位dp题目，利用记忆化搜索解决</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> bin_digit[<span class="number">32</span>];</span><br><span class="line">    <span class="keyword">int</span> dp[<span class="number">32</span>][<span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findIntegers</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">memset</span>(dp, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line">        <span class="comment">//获取num的二进制形式</span></span><br><span class="line">        <span class="keyword">while</span>(num) &#123;</span><br><span class="line">            <span class="keyword">if</span>(num &amp; <span class="number">1</span>) bin_digit[++bin_digit[<span class="number">0</span>]] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> bin_digit[++bin_digit[<span class="number">0</span>]] = <span class="number">0</span>;</span><br><span class="line">            num &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dfs(bin_digit[<span class="number">0</span>], <span class="number">0</span>, <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos, <span class="keyword">int</span> preDit, <span class="keyword">bool</span> limit)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!pos) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 如果已经搜索过直接返回</span></span><br><span class="line">        <span class="keyword">if</span>(!limit &amp;&amp; dp[pos][preDit] != <span class="number">-1</span>) <span class="keyword">return</span> dp[pos][preDit];</span><br><span class="line">        <span class="keyword">int</span> up = limit ? bin_digit[pos] : <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> nextDigit = <span class="number">0</span>; nextDigit &lt;= up; ++nextDigit) &#123;</span><br><span class="line">            <span class="comment">// 不能出现连续的1</span></span><br><span class="line">            <span class="keyword">if</span>(nextDigit == <span class="number">1</span> &amp;&amp; nextDigit == preDit) <span class="keyword">continue</span>;</span><br><span class="line">            res += dfs(pos - <span class="number">1</span>, nextDigit, limit &amp;&amp; nextDigit == bin_digit[pos]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!limit) <span class="keyword">return</span> dp[pos][preDit] = res;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>其中<code>dp[pos][preDit]</code>表示小于等于二进制为pos位，且最高位为predit的数字中满足题意的有多少个</p>
+<p><img src="https://youknow.wang/images/2020/10/21/imagece50bec53a11987a.png" alt="" /></p>
+<p>时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span>为n的二进制位数，空间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>M</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span></p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2020/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-  </nav>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span> <a href="/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/">每天一道leetcode-non-negative-integers-without-consecutive-ones</a></p>
+  <p><span>文章作者:</span> <a href="/" title="访问 Christopher Liu 的个人博客">Christopher Liu</a></p>
+  <p><span>发布时间:</span> 2020年10月21日 - 14:10</p>
+  <p><span>最后更新:</span> 2020年10月21日 - 14:10</p>
+  <p><span>原始链接:</span> <a href="/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/" title="每天一道leetcode-non-negative-integers-without-consecutive-ones">https://christopherrliu.github.io/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-non-negative-integers-without-consecutive-ones/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><!--<i class="fa fa-creative-commons"></i> -->
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> C++</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 算法</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 面试</a>
+              <a href="/tags/%E6%95%B0%E4%BD%8Ddp/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 数位dp</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-long-pressed-name/" rel="prev" title="每天一道leetcode-long-pressed-name">
+      <i class="fa fa-chevron-left"></i> 每天一道leetcode-long-pressed-name
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -428,6 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
