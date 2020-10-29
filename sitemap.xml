@@ -298,13 +298,6 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%A0%91/</loc>
-    <lastmod>2020-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://christopherrliu.github.io/tags/%E6%A0%88/</loc>
     <lastmod>2020-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -320,6 +313,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2020-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E6%A0%91/</loc>
     <lastmod>2020-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,6 +396,13 @@
   </url>
   
   <url>
+    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
+    <lastmod>2020-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2020-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -404,13 +411,6 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E6%AF%8D%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2020-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
     <lastmod>2020-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
