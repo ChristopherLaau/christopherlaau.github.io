@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://christopherrliu.github.io/2020/10/31/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-closest-palindrome/</loc>
+    
+    <lastmod>2020-10-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/2020/10/30/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-regular-expression-matching/</loc>
     
     <lastmod>2020-10-31</lastmod>
@@ -390,6 +397,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/hash/</loc>
+    <lastmod>2020-10-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/javascript/</loc>
     <lastmod>2020-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
