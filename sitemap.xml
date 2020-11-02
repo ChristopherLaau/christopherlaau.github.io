@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://christopherrliu.github.io/2020/11/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-cherry-pickup-ii/</loc>
+    
+    <lastmod>2020-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/2020/11/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-create-maximum-number/</loc>
     
     <lastmod>2020-11-02</lastmod>
@@ -424,14 +431,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%A4%A7%E9%A1%B6%E5%A0%86/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%A4%A7%E9%A1%B6%E5%A0%86/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -580,14 +587,14 @@
 
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
+    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
