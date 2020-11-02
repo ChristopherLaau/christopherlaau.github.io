@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://christopherrliu.github.io/2020/11/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-intersection-of-two-arrays/</loc>
+    
+    <lastmod>2020-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/2020/11/01/leetcode%E5%91%A8%E8%B5%9B-weekly-contest-213/</loc>
     
     <lastmod>2020-11-02</lastmod>
@@ -480,14 +487,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%9B%9E%E6%BA%AF/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%9B%9E%E6%BA%AF/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
