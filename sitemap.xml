@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://christopherrliu.github.io/2020/11/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-brick-wall/</loc>
+    
+    <lastmod>2020-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/2020/11/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-cherry-pickup-ii/</loc>
     
     <lastmod>2020-11-02</lastmod>
@@ -431,6 +438,13 @@
   </url>
   
   <url>
+    <loc>https://christopherrliu.github.io/tags/hash/</loc>
+    <lastmod>2020-11-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/tags/%E5%A4%A7%E9%A1%B6%E5%A0%86/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
@@ -460,13 +474,6 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E5%87%B8%E5%8C%85/</loc>
-    <lastmod>2020-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/hash/</loc>
     <lastmod>2020-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
