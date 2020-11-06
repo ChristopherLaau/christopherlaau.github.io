@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://christopherrliu.github.io/2020/11/05/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-word-ladder/</loc>
+    <loc>https://christopherrliu.github.io/2020/11/06/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sort-integers-by-the-number-of-1-bits/</loc>
     
-    <lastmod>2020-11-05</lastmod>
+    <lastmod>2020-11-06</lastmod>
     
   </url>
   
   <url>
     <loc>https://christopherrliu.github.io/2020/11/04/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-strange-printer/</loc>
     
-    <lastmod>2020-11-04</lastmod>
+    <lastmod>2020-11-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/2020/11/05/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-word-ladder/</loc>
+    
+    <lastmod>2020-11-05</lastmod>
     
   </url>
   
@@ -621,6 +628,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2020-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
     <lastmod>2020-11-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
