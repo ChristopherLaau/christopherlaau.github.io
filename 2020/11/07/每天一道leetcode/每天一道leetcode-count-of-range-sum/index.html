@@ -35,8 +35,9 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/11/07/B5IVEV.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/11/07/B5omZt.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/11/07/B5IyUf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/11/07/B5LWFI.png">
 <meta property="article:published_time" content="2020-11-07T11:11:04.000Z">
-<meta property="article:modified_time" content="2020-11-07T11:25:02.285Z">
+<meta property="article:modified_time" content="2020-11-07T12:07:59.131Z">
 <meta property="article:author" content="Christopher Liu">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="算法">
@@ -214,7 +215,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-11-07 19:11:04 / 修改时间：19:25:02" itemprop="dateCreated datePublished" datetime="2020-11-07T19:11:04+08:00">2020-11-07</time>
+              <time title="创建时间：2020-11-07 19:11:04 / 修改时间：20:07:59" itemprop="dateCreated datePublished" datetime="2020-11-07T19:11:04+08:00">2020-11-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,14 +255,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -291,7 +292,9 @@
 <p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
 <h4 id="树状数组"><a class="markdownIt-Anchor" href="#树状数组"></a> 树状数组</h4>
 <p>当然区间和也可以用树状数组维护</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; pre_sum;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tree;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>, <span class="keyword">int</span>&gt; sum2idx;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt; sums;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> loc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(loc &lt;= n) &#123;</span><br><span class="line">            tree[loc]++;</span><br><span class="line">            loc += (loc &amp; (-loc));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> loc)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(loc) &#123;</span><br><span class="line">            res += tree[loc];</span><br><span class="line">            loc -= (loc &amp; (-loc));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">countRangeSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> lower, <span class="keyword">int</span> upper)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        pre_sum.resize(n);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        pre_sum[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)nums[<span class="number">0</span>]);</span><br><span class="line">        sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)nums[<span class="number">0</span>] - upper);</span><br><span class="line">        sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)nums[<span class="number">0</span>] - lower);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            pre_sum[i] = pre_sum[i - <span class="number">1</span>] + (<span class="keyword">long</span> <span class="keyword">long</span>)nums[i];</span><br><span class="line">            sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)pre_sum[i]);</span><br><span class="line">            sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)pre_sum[i] - upper);</span><br><span class="line">            sums.insert((<span class="keyword">long</span> <span class="keyword">long</span>)pre_sum[i] - lower);</span><br><span class="line">        &#125;</span><br><span class="line">        sums.insert(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sum : sums) &#123;</span><br><span class="line">            sum2idx[sum] = ++count;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        n = sums.size();</span><br><span class="line">        tree.resize(n + <span class="number">5</span>, <span class="number">0</span>);</span><br><span class="line">        update(n, sum2idx[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sum : pre_sum) &#123;</span><br><span class="line">            ans += query(sum2idx[sum - lower]) - query(sum2idx[sum - upper] - <span class="number">1</span>);</span><br><span class="line">            update(n, sum2idx[sum]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2020/11/07/B5LWFI.png" alt="" /></p>
+<p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
 
     </div>
 
@@ -321,7 +324,7 @@
   <p><span>本文标题:</span> <a href="/2020/11/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-count-of-range-sum/">每天一道leetcode-count-of-range-sum</a></p>
   <p><span>文章作者:</span> <a href="/" title="访问 Christopher Liu 的个人博客">Christopher Liu</a></p>
   <p><span>发布时间:</span> 2020年11月07日 - 19:11</p>
-  <p><span>最后更新:</span> 2020年11月07日 - 19:11</p>
+  <p><span>最后更新:</span> 2020年11月07日 - 20:11</p>
   <p><span>原始链接:</span> <a href="/2020/11/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-count-of-range-sum/" title="每天一道leetcode-count-of-range-sum">https://christopherrliu.github.io/2020/11/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-count-of-range-sum/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/11/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-count-of-range-sum/"  aria-label="复制成功！"></i></span>
   </p>
@@ -511,17 +514,17 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">104k</span>
+    <span title="站点总字数">105k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:34</span>
+    <span title="站点阅读时长">1:35</span>
 </div>
 
 <!--<div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共32.3k字</span>
+  <span class="post-count">博客全站共32.5k字</span>
 </div>-->
 
         
