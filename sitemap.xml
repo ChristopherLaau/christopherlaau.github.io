@@ -515,13 +515,6 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/hash/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://christopherrliu.github.io/tags/python/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
@@ -550,6 +543,13 @@
   </url>
   
   <url>
+    <loc>https://christopherrliu.github.io/tags/hash/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
@@ -565,20 +565,6 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E6%A0%91%E5%BD%A2dp/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%A4%A7%E9%A1%B6%E5%A0%86/</loc>
-    <lastmod>2020-11-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -606,7 +592,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/c/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%A4%A7%E9%A1%B6%E5%A0%86/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -621,6 +614,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E6%90%9C%E7%B4%A2/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/c/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -711,14 +711,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/DFA/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/</loc>
+    <loc>https://christopherrliu.github.io/tags/DFA/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
