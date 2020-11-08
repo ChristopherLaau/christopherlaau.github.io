@@ -466,13 +466,6 @@
 
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/VPS/</loc>
-    <lastmod>2020-11-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://christopherrliu.github.io/tags/C/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
@@ -509,6 +502,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/VPS/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -683,14 +683,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%9B%9E%E6%BA%AF/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%9B%9E%E6%BA%AF/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -732,14 +732,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -790,14 +790,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/%E7%9E%8E%E6%90%9E/</loc>
+    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
+    <loc>https://christopherrliu.github.io/categories/%E7%9E%8E%E6%90%9E/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
