@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-11-09T09:31:43.519Z</updated>
+  <updated>2020-11-09T11:48:10.365Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -21,15 +21,19 @@
     <link href="https://christopherrliu.github.io/2020/11/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Text/"/>
     <id>https://christopherrliu.github.io/2020/11/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Text/</id>
     <published>2020-11-09T09:29:35.000Z</published>
-    <updated>2020-11-09T09:31:43.519Z</updated>
+    <updated>2020-11-09T11:48:10.365Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="text-summarization-with-pretrained-encoders"><a class="markdownIt-Anchor" href="#text-summarization-with-pretrained-encoders"></a> <strong>Text Summarization with Pretrained Encoders</strong></h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="text-summarization-with-pretrained-encoders"><a class="markdownIt-Anchor" href="#text-summarization-with-pretrained-encoders"></a> <strong>Text Summarization with Pretrained Encoders</strong></h2><h3 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h3><ul><li>将BERT应用于文本摘要生成，提出了一种可以用于提取式和生成式摘要生成的通用框架</li><li>基于BERT的encoder能够表示文档的语义，并获得句子的表征</li><li>一种新的微调方法弥补encoder和decoder的mismatch</li><li>两阶段的微调方法提升摘要质量</li></ul><a id="more"></a><h3 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h3><ul><li>预训练的语言模型在NLP的许多领域中取得了SOTA的效果；基于大规模语料库训练的BERT模型可根据具体任务的需求进行微调。</li><li>大部分的任务基于句子级或段落级的理解，而文本摘要的生成需要范围更广的语义理解，并且生成式的文本摘要提取还要求模型且具有语言生成能力——需要产生原文中没有出现过的单词或词组。</li><li>基于BERT提出了一种文档级的encoder，它既可以对文档进行编码，也可以获得句子的表征，抽取式的模型在这种encoder上堆叠了几层Transformer层，以便获取文档级的特征用来提取句子；生成式的模型是encoder-decoder架构，encoder是来自于BERT预训练模型，decoder是随机初始化的Transformer层。因为encoder是预训练好的，decoder则是从头开始训练，为了消除这种mismatch的影响，设计了一种新的训练优化方式——对encoder和decoder设置不同的优化器。另外，受到之前工作的启发，将encoder微调两次，首先是抽取式任务的微调，然后是生成式任务的微调。</li><li>在三个不同写作方式和摘要风格的数据集上评价模型，取得了SOTA的效果，三个贡献：<ul><li>强调了摘要生成中文档编码的重要性</li><li>展示了在抽取式和生成式文本摘要中预训练模型的使用方法</li><li>可作为之后工作的Baseline</li></ul></li></ul><h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h3><h4 id="pretrained-language-models"><a class="markdownIt-Anchor" href="#pretrained-language-models"></a> Pretrained Language Models</h4>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;text-summarization-with-pretrained-encoders&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#text-summarization-with-pretrained-encoders&quot;&gt;&lt;/a&gt; &lt;</summary>
-      
+    <summary type="html">&lt;h2 id=&quot;text-summarization-with-pretrained-encoders&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#text-summarization-with-pretrained-encoders&quot;&gt;&lt;/a&gt; &lt;strong&gt;Text Summarization with Pretrained Encoders&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;abstract&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#abstract&quot;&gt;&lt;/a&gt; Abstract&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;将BERT应用于文本摘要生成，提出了一种可以用于提取式和生成式摘要生成的通用框架&lt;/li&gt;
+&lt;li&gt;基于BERT的encoder能够表示文档的语义，并获得句子的表征&lt;/li&gt;
+&lt;li&gt;一种新的微调方法弥补encoder和decoder的mismatch&lt;/li&gt;
+&lt;li&gt;两阶段的微调方法提升摘要质量&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
