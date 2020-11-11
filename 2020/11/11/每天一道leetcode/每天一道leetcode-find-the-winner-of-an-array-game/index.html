@@ -24,17 +24,27 @@
     var CONFIG = {"hostname":"christopherrliu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="There is no royal road to learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Christopherの博客">
-<meta property="og:url" content="https://christopherrliu.github.io/tags/%E4%BA%8C%E5%88%86/index.html">
+  <meta name="description" content="题意  英文题意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天一道leetcode-find-the-winner-of-an-array-game">
+<meta property="og:url" content="https://christopherrliu.github.io/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/index.html">
 <meta property="og:site_name" content="Christopherの博客">
-<meta property="og:description" content="There is no royal road to learning">
+<meta property="og:description" content="题意  英文题意">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/11/11/IyMU6FAKYrCmNZD.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/11/3OmYJ81cRk6FPzq.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/11/5aisAVuEZLWSwX4.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/11/qD1x2pjvZToMAYJ.png">
+<meta property="article:published_time" content="2020-11-11T12:44:45.000Z">
+<meta property="article:modified_time" content="2020-11-11T13:23:04.291Z">
 <meta property="article:author" content="Christopher Liu">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/11/11/IyMU6FAKYrCmNZD.png">
 
-<link rel="canonical" href="https://christopherrliu.github.io/tags/%E4%BA%8C%E5%88%86/">
+<link rel="canonical" href="https://christopherrliu.github.io/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/">
 
 
 <script id="page-configurations">
@@ -42,12 +52,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 二分 | Christopherの博客</title>
+  <title>每天一道leetcode-find-the-winner-of-an-array-game | Christopherの博客</title>
   
 
 
@@ -169,57 +179,197 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/myavatar.png">
+      <meta itemprop="name" content="Christopher Liu">
+      <meta itemprop="description" content="There is no royal road to learning">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Christopherの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          每天一道leetcode-find-the-winner-of-an-array-game
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-11 20:44:45 / 修改时间：21:23:04" itemprop="dateCreated datePublished" datetime="2020-11-11T20:44:45+08:00">2020-11-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="热度" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span id="busuanzi_value_page_pv"></span>
+              <span>℃</span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">二分
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>905</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+<h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4>
+<p><img src="https://i.loli.net/2020/11/11/IyMU6FAKYrCmNZD.png" alt="" /></p>
+<a id="more"></a>
+<h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4>
+<p><img src="https://i.loli.net/2020/11/11/3OmYJ81cRk6FPzq.png" alt="" /></p>
+<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
+<h4 id="暴力"><a class="markdownIt-Anchor" href="#暴力"></a> 暴力❌</h4>
+<p>看到题目，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mo>≥</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k \ge n - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">≥</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mord mathrm">1</span></span></span></span>的时候取最大值，那么<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>的范围与数组长度一致，直接暴力！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getWinner</span>(<span class="params">self, arr: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        n = len(arr)</span><br><span class="line">        first, win_number = arr[<span class="number">0</span>], <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> k &gt;= n :</span><br><span class="line">            <span class="keyword">return</span> max(arr)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span> :</span><br><span class="line">            first, second, *rest = arr</span><br><span class="line">            <span class="keyword">if</span> first &lt; second :</span><br><span class="line">                <span class="keyword">if</span> win_number == k :</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                win_number = <span class="number">1</span></span><br><span class="line">                arr = [second] + rest + [first]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                win_number += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> win_number == k :</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                arr[<span class="number">1</span>: ] = rest + [second]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> first</span><br></pre></td></tr></table></figure>
+<p>果断超时</p>
+<p><img src="https://i.loli.net/2020/11/11/5aisAVuEZLWSwX4.png" alt="" /></p>
+<p><s>果然中等题目不会这么简单</s></p>
+<h4 id="优化"><a class="markdownIt-Anchor" href="#优化"></a> 优化🔑</h4>
+<p>考虑如何优化，观察到这个过程类似于一个冒泡的过程，所以我们从头遍历，记录每个元素获胜的次数，遇到最大元素就直接退出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getWinner</span>(<span class="params">self, arr: List[int], k: int</span>) -&gt; int:</span></span><br><span class="line">        n = len(arr)</span><br><span class="line">        win_number = <span class="number">0</span></span><br><span class="line">        max_element = max(arr)</span><br><span class="line">        first, win_number = arr[<span class="number">0</span>], <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> k &gt;= n :</span><br><span class="line">            <span class="keyword">return</span> max_element</span><br><span class="line"></span><br><span class="line">        base = arr[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> element <span class="keyword">in</span> arr[<span class="number">1</span>:] :</span><br><span class="line">            <span class="keyword">if</span> element == max_element :</span><br><span class="line">                <span class="keyword">return</span> max_element</span><br><span class="line">            <span class="keyword">if</span> element &lt; base :</span><br><span class="line">                win_number += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> win_number == k :</span><br><span class="line">                    <span class="keyword">return</span> base</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                win_number = <span class="number">1</span></span><br><span class="line">                base = element</span><br><span class="line">                <span class="keyword">if</span> win_number == k :</span><br><span class="line">                    <span class="keyword">return</span> base</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> base</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/11/11/qD1x2pjvZToMAYJ.png" alt="" /></p>
+<p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-11-08T20:19:14+08:00"
-              content="2020-11-08">
-          11-08
-        </time>
-      </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/08/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-kth-smallest-number-in-multiplication-table/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-kth-smallest-number-in-multiplication-table</span>
-          </a>
-      </div>
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span> <a href="/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/">每天一道leetcode-find-the-winner-of-an-array-game</a></p>
+  <p><span>文章作者:</span> <a href="/" title="访问 Christopher Liu 的个人博客">Christopher Liu</a></p>
+  <p><span>发布时间:</span> 2020年11月11日 - 20:11</p>
+  <p><span>最后更新:</span> 2020年11月11日 - 21:11</p>
+  <p><span>原始链接:</span> <a href="/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/" title="每天一道leetcode-find-the-winner-of-an-array-game">https://christopherrliu.github.io/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/11/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-the-winner-of-an-array-game/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><!--<i class="fa fa-creative-commons"></i> -->
+  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
 
-    </header>
+      
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 算法</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 面试</a>
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/11/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Leveraging-Pre-trained-Checkpoints-for-Sequence-Generation-Tasks/" rel="prev" title="论文阅读-Leveraging Pre-trained Checkpoints for Sequence Generation Tasks">
+      <i class="fa fa-chevron-left"></i> 论文阅读-Leveraging Pre-trained Checkpoints for Sequence Generation Tasks
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -266,6 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B"><span class="nav-number">2.1.</span> <span class="nav-text"> 暴力❌</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text"> 优化🔑</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
