@@ -24,17 +24,27 @@
     var CONFIG = {"hostname":"christopherrliu.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="There is no royal road to learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Christopherの博客">
-<meta property="og:url" content="https://christopherrliu.github.io/tags/%E6%A0%91/index.html">
+  <meta name="description" content="题意  英文题意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天一道leetcode-matrix-cells-in-distance-order">
+<meta property="og:url" content="https://christopherrliu.github.io/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/index.html">
 <meta property="og:site_name" content="Christopherの博客">
-<meta property="og:description" content="There is no royal road to learning">
+<meta property="og:description" content="题意  英文题意">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/11/17/izTUa4lqEsS8QAJ.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/17/XSCqlWNQg3HuKwz.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/17/mSTLMiFpqdUnJKX.png">
+<meta property="article:published_time" content="2020-11-17T04:30:51.000Z">
+<meta property="article:modified_time" content="2020-11-17T04:33:48.218Z">
 <meta property="article:author" content="Christopher Liu">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="bfs">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/11/17/izTUa4lqEsS8QAJ.png">
 
-<link rel="canonical" href="https://christopherrliu.github.io/tags/%E6%A0%91/">
+<link rel="canonical" href="https://christopherrliu.github.io/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/">
 
 
 <script id="page-configurations">
@@ -42,12 +52,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 树 | Christopherの博客</title>
+  <title>每天一道leetcode-matrix-cells-in-distance-order | Christopherの博客</title>
   
 
 
@@ -169,137 +179,151 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/myavatar.png">
+      <meta itemprop="name" content="Christopher Liu">
+      <meta itemprop="description" content="There is no royal road to learning">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Christopherの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          每天一道leetcode-matrix-cells-in-distance-order
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-17 12:30:51 / 修改时间：12:33:48" itemprop="dateCreated datePublished" datetime="2020-11-17T12:30:51+08:00">2020-11-17</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="热度" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span id="busuanzi_value_page_pv"></span>
+              <span>℃</span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">树
-          <small>标签</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>667</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-29T20:12:00+08:00"
-              content="2020-10-29">
-          10-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/29/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sum-root-to-leaf-numbers/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-sum-root-to-leaf-numbers</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-27T11:25:08+08:00"
-              content="2020-10-27">
-          10-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/27/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-binary-tree-preorder-traversal/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-binary-tree-preorder-traversal</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-15T13:47:35+08:00"
-              content="2020-10-15">
-          10-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/15/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-populating-next-right-pointers-in-each-node/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-populating-next-right-pointers-in-each-node</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-12T20:56:29+08:00"
-              content="2020-10-12">
-          10-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-minimum-absolute-difference-in-bst/" itemprop="url">
-            <span itemprop="name">每天一道leetcode-minimum-absolute-difference-in-bst</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-10-06T15:09:33+08:00"
-              content="2020-10-06">
-          10-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/06/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sum-of-distances-in-tree/" itemprop="url">
-            <span itemprop="name">每天一道leetcode——sum of distances in tree</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+        <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
+<h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4>
+<p><img src="https://i.loli.net/2020/11/17/izTUa4lqEsS8QAJ.png" alt="" /></p>
+<a id="more"></a>
+<h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4>
+<p><img src="https://i.loli.net/2020/11/17/XSCqlWNQg3HuKwz.png" alt="" /></p>
+<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
+<p>简单bfs</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">R</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">C</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">r0</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">c0</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> allCellsDistOrder = <span class="function"><span class="keyword">function</span>(<span class="params">R, C, r0, c0</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">let</span> vis = <span class="keyword">new</span> <span class="built_in">Array</span>(R).fill(<span class="literal">null</span>)</span><br><span class="line">        .map(<span class="function">(<span class="params">v</span>) =&gt;</span> <span class="keyword">new</span> <span class="built_in">Array</span>(C).fill(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">let</span> res = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">const</span> dir = [[<span class="number">1</span>,<span class="number">0</span>], [<span class="number">-1</span>,<span class="number">0</span>], [<span class="number">0</span>,<span class="number">1</span>], [<span class="number">0</span>,<span class="number">-1</span>]];</span><br><span class="line"></span><br><span class="line">    queue.push([r0, c0]);</span><br><span class="line">    vis[r0][c0] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(queue.length) &#123;</span><br><span class="line">        <span class="keyword">const</span> [cr, cc] = queue.shift();</span><br><span class="line">        res.push([cr, cc]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> [r, c] <span class="keyword">of</span> dir) &#123;</span><br><span class="line">            <span class="keyword">let</span> [nr, nc] = [cr + r, cc + c];</span><br><span class="line">            <span class="keyword">if</span>(nr &lt; <span class="number">0</span> || nc &lt; <span class="number">0</span> || nr &gt;= R || nc &gt;= C || vis[nr][nc]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[nr][nc] = <span class="number">1</span>;</span><br><span class="line">            queue.push([nr, nc]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/11/17/mSTLMiFpqdUnJKX.png" alt="" /></p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 算法</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 面试</a>
+              <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> javascript</a>
+              <a href="/tags/bfs/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> bfs</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-palindrome-pairs/" rel="prev" title="每天一道leetcode-palindrome-pairs">
+      <i class="fa fa-chevron-left"></i> 每天一道leetcode-palindrome-pairs
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -346,6 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

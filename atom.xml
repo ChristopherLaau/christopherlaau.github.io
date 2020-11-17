@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-11-17T04:18:55.520Z</updated>
+  <updated>2020-11-17T04:33:48.218Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-matrix-cells-in-distance-order</title>
+    <link href="https://christopherrliu.github.io/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/"/>
+    <id>https://christopherrliu.github.io/2020/11/17/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-matrix-cells-in-distance-order/</id>
+    <published>2020-11-17T04:30:51.000Z</published>
+    <updated>2020-11-17T04:33:48.218Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/11/17/izTUa4lqEsS8QAJ.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/11/17/XSCqlWNQg3HuKwz.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>简单bfs</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">R</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">C</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">r0</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">c0</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number[][]&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> allCellsDistOrder = <span class="function"><span class="keyword">function</span>(<span class="params">R, C, r0, c0</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">let</span> vis = <span class="keyword">new</span> <span class="built_in">Array</span>(R).fill(<span class="literal">null</span>)</span><br><span class="line">        .map(<span class="function">(<span class="params">v</span>) =&gt;</span> <span class="keyword">new</span> <span class="built_in">Array</span>(C).fill(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">let</span> res = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">    <span class="keyword">const</span> dir = [[<span class="number">1</span>,<span class="number">0</span>], [<span class="number">-1</span>,<span class="number">0</span>], [<span class="number">0</span>,<span class="number">1</span>], [<span class="number">0</span>,<span class="number">-1</span>]];</span><br><span class="line"></span><br><span class="line">    queue.push([r0, c0]);</span><br><span class="line">    vis[r0][c0] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(queue.length) &#123;</span><br><span class="line">        <span class="keyword">const</span> [cr, cc] = queue.shift();</span><br><span class="line">        res.push([cr, cc]);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> [r, c] <span class="keyword">of</span> dir) &#123;</span><br><span class="line">            <span class="keyword">let</span> [nr, nc] = [cr + r, cc + c];</span><br><span class="line">            <span class="keyword">if</span>(nr &lt; <span class="number">0</span> || nc &lt; <span class="number">0</span> || nr &gt;= R || nc &gt;= C || vis[nr][nc]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[nr][nc] = <span class="number">1</span>;</span><br><span class="line">            queue.push([nr, nc]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/11/17/mSTLMiFpqdUnJKX.png" alt="" /></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/11/17/izTUa4lqEsS8QAJ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
+    
+    <category term="bfs" scheme="https://christopherrliu.github.io/tags/bfs/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-palindrome-pairs</title>
@@ -585,42 +612,6 @@
     <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="优先队列" scheme="https://christopherrliu.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文阅读-text summarization with pretrained encoders Encoders</title>
-    <link href="https://christopherrliu.github.io/2020/11/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Text-Summarization-with-Pretrained-Encoders-Encoders/"/>
-    <id>https://christopherrliu.github.io/2020/11/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Text-Summarization-with-Pretrained-Encoders-Encoders/</id>
-    <published>2020-11-09T09:29:35.000Z</published>
-    <updated>2020-11-13T09:43:34.051Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="text-summarization-with-pretrained-encoders"><a class="markdownIt-Anchor" href="#text-summarization-with-pretrained-encoders"></a> <strong>Text Summarization with Pretrained Encoders</strong></h2><h3 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h3><ul><li>将BERT应用于文本摘要生成，提出了一种可以用于提取式和生成式摘要生成的通用框架</li><li>基于BERT的encoder能够表示文档的语义，并获得句子的表征</li><li>一种新的微调方法弥补encoder和decoder的mismatch</li><li>两阶段的微调方法提升摘要质量</li></ul><a id="more"></a><p><img src="https://i.loli.net/2020/11/13/HJAMFhUIiVS8ux2.png" alt="" /></p>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;text-summarization-with-pretrained-encoders&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#text-summarization-with-pretrained-encoders&quot;&gt;&lt;/a&gt; &lt;strong&gt;Text Summarization with Pretrained Encoders&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;abstract&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#abstract&quot;&gt;&lt;/a&gt; Abstract&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;将BERT应用于文本摘要生成，提出了一种可以用于提取式和生成式摘要生成的通用框架&lt;/li&gt;
-&lt;li&gt;基于BERT的encoder能够表示文档的语义，并获得句子的表征&lt;/li&gt;
-&lt;li&gt;一种新的微调方法弥补encoder和decoder的mismatch&lt;/li&gt;
-&lt;li&gt;两阶段的微调方法提升摘要质量&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="论文阅读" scheme="https://christopherrliu.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-    <category term="nlp" scheme="https://christopherrliu.github.io/tags/nlp/"/>
-    
-    <category term="bert" scheme="https://christopherrliu.github.io/tags/bert/"/>
-    
-    <category term="summarization" scheme="https://christopherrliu.github.io/tags/summarization/"/>
-    
-    <category term="pretrained model" scheme="https://christopherrliu.github.io/tags/pretrained-model/"/>
-    
-    <category term="transformer" scheme="https://christopherrliu.github.io/tags/transformer/"/>
     
   </entry>
   
