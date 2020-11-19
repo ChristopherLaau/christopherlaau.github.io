@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-11-18T13:08:30.448Z</updated>
+  <updated>2020-11-19T03:08:15.322Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-longest-palindromic-substring</title>
+    <link href="https://christopherrliu.github.io/2020/11/18/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-longest-palindromic-substring/"/>
+    <id>https://christopherrliu.github.io/2020/11/18/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-longest-palindromic-substring/</id>
+    <published>2020-11-18T14:51:47.000Z</published>
+    <updated>2020-11-19T03:08:15.322Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/11/18/39SvhszdCV1x5yR.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/11/18/fs6XuSEmd8PHYAl.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>解决回文串有一个很直接的中心扫描算法，复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span>，这里不做赘述，重点说一下这个<strong>线性复杂度</strong>的神奇算法：<strong>Manacher算法</strong></p><p>用一张图就可以说明白：</p><p><img src="https://i.loli.net/2020/11/19/ZgapnPkKlGHEboi.png" alt="" /></p><p>如图所示，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mord mathit">d</span></span></span></span>是目前为止最长回文序列的中心，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi><mo>−</mo><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">to - id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span><span class="mbin">−</span><span class="mord mathit">i</span><span class="mord mathit">d</span></span></span></span>是目前为止最长回文序列的半径，要求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>点为中心的的回文序列，我们可以充分利用之前已经计算过的部分，因为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>∗</mo><mi>i</mi><mi>d</mi><mo>−</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">2*id-i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">∗</span><span class="mord mathit">i</span><span class="mord mathit">d</span><span class="mbin">−</span><span class="mord mathit">i</span></span></span></span>是对称的，所以两者在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span></span></span></span>以内的部分是一一对应的，就可以得到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>d</mi><mi>p</mi><mo>[</mo><mn>2</mn><mo>∗</mo><mi>i</mi><mi>d</mi><mo>−</mo><mi>i</mi><mo>]</mo><mo separator="true">,</mo><mi>t</mi><mi>o</mi><mo>−</mo><mi>i</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">dp[i] = min(dp[2*id-i],to-i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathrm">2</span><span class="mbin">∗</span><span class="mord mathit">i</span><span class="mord mathit">d</span><span class="mbin">−</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mord mathit">o</span><span class="mbin">−</span><span class="mord mathit">i</span><span class="mclose">)</span></span></span></span>，之所以加<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">min</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span></span></span></span>是为防止超出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span></span></span></span>的范围，当然若<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>不在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span></span></span></span>的范围内，就没办法了令<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">dp[i]=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span>；还没完，因为在当前<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>以外的部分还是有可能出现更长回文串的，所以还要<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>+</mo><mo>+</mo><mspace width="1em"></mspace><mi>i</mi><mi>f</mi><mspace width="1em"></mspace><mi>s</mi><mo>[</mo><mi>i</mi><mo>−</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>]</mo><mo>=</mo><mo>=</mo><mi>s</mi><mo>[</mo><mi>i</mi><mo>+</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i]++\quad if\quad s[i-dp[i]]==s[i+dp[i]]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mbin">+</span><span class="mord">+</span><span class="mord mspace quad"></span><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mspace quad"></span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mbin">−</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mclose">]</span><span class="mrel">=</span><span class="mrel">=</span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mbin">+</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mclose">]</span></span></span></span>，最后我们希望<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span></span></span></span>尽可能的大，这样就可以利用更多之前的信息，所以每次计算出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>，都要更新<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mord mathit">d</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">o</span></span></span></span></p><p>上面的算法是针对奇数回文串的，为了应对偶数回文串可以在原字符串字符之间加入特殊字符，我一般用<code>\t</code>，然后在首尾加入两个另外的特殊字符，如<code>\n#</code>来防止越界如下图：</p><p><img src="https://i.loli.net/2020/11/19/ERJagNxQ6c2fM5j.png" alt="" /></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> flag = <span class="number">0</span>, index = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">string</span> ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="built_in">string</span> newStr = <span class="string">&quot;\t&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c : s) &#123;</span><br><span class="line">            newStr += c;</span><br><span class="line">            newStr += <span class="string">&#x27;\t&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        newStr = (<span class="keyword">char</span>)(<span class="number">1</span>) + newStr + <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> id = <span class="number">0</span>, to = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; newStr.length(); ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(to &gt;= i) dp[i] = min(dp[<span class="number">2</span> * id - i], to - i);</span><br><span class="line">            <span class="keyword">else</span> dp[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(newStr[i + dp[i]] == newStr[i - dp[i]]) ++dp[i];</span><br><span class="line">            <span class="keyword">if</span>(i + dp[i] &gt; to) to = i + dp[i], id = i;</span><br><span class="line">            <span class="keyword">if</span>(dp[i] - <span class="number">1</span> &gt; flag) &#123;</span><br><span class="line">                flag = dp[i] - <span class="number">1</span>;</span><br><span class="line">                index = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = index - dp[index] + <span class="number">1</span>; i &lt; index + dp[index]; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(newStr[i] != <span class="number">9</span>) ans += newStr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> dp[<span class="number">2011</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/11/18/fVIteGNiCBySu8l.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/11/18/39SvhszdCV1x5yR.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="Manacher算法" scheme="https://christopherrliu.github.io/tags/Manacher%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>统计学习方法读书笔记-第1章 统计学习及监督学习概论</title>
@@ -97,11 +128,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
@@ -340,9 +371,9 @@
     
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
@@ -371,11 +402,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
@@ -466,9 +497,9 @@
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
   </entry>
   
@@ -492,11 +523,11 @@
     
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
-    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
@@ -588,38 +619,6 @@
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论文阅读-Leveraging Pre-trained Checkpoints for Sequence Generation Tasks</title>
-    <link href="https://christopherrliu.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Leveraging-Pre-trained-Checkpoints-for-Sequence-Generation-Tasks/"/>
-    <id>https://christopherrliu.github.io/2020/11/11/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Leveraging-Pre-trained-Checkpoints-for-Sequence-Generation-Tasks/</id>
-    <published>2020-11-11T07:39:41.000Z</published>
-    <updated>2020-11-13T06:03:59.427Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="leveraging-pre-trained-checkpoints-for-sequence-generation-tasks"><a class="markdownIt-Anchor" href="#leveraging-pre-trained-checkpoints-for-sequence-generation-tasks"></a> Leveraging Pre-trained Checkpoints for Sequence Generation Tasks</h2><p>这篇文章讨论了如何将预训练参数应用于文本序列生成，经过大量实验发现encoder和decoder加载BERT和RoBERTa参数模型效果最好</p><p><img src="https://i.loli.net/2020/11/13/Wft2IMQqlu4KaRh.png" alt="" /></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;leveraging-pre-trained-checkpoints-for-sequence-generation-tasks&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#leveraging-pre-trained-checkpo</summary>
-      
-    
-    
-    
-    <category term="论文阅读" scheme="https://christopherrliu.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-    <category term="nlp" scheme="https://christopherrliu.github.io/tags/nlp/"/>
-    
-    <category term="sequence generation" scheme="https://christopherrliu.github.io/tags/sequence-generation/"/>
-    
-    <category term="语言模型" scheme="https://christopherrliu.github.io/tags/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/"/>
-    
-    <category term="BERT" scheme="https://christopherrliu.github.io/tags/BERT/"/>
-    
-    <category term="GPT-2" scheme="https://christopherrliu.github.io/tags/GPT-2/"/>
     
   </entry>
   
