@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-11-19T11:43:39.149Z</updated>
+  <updated>2020-11-20T03:09:21.049Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-insertion-sort-list</title>
+    <link href="https://christopherrliu.github.io/2020/11/20/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-insertion-sort-list/"/>
+    <id>https://christopherrliu.github.io/2020/11/20/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-insertion-sort-list/</id>
+    <published>2020-11-20T02:56:30.000Z</published>
+    <updated>2020-11-20T03:09:21.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/11/20/2Vrc5zG8jowfTe9.png" alt="image.png" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/11/20/CrN5sLktwRpg6TF.png" alt="image.png" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>插入排序模板题，数据结构课应该都学过，没什么好说的</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">insertionSortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">nullptr</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode* cur = head-&gt;next;</span><br><span class="line">        ListNode* next = cur;</span><br><span class="line">        ListNode* virtual_head = <span class="keyword">new</span> ListNode(<span class="number">-1</span>);</span><br><span class="line">        virtual_head-&gt;next = head;</span><br><span class="line">        head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">while</span>(cur) &#123;</span><br><span class="line">            next = cur-&gt;next;</span><br><span class="line">            ListNode* ptr = virtual_head;</span><br><span class="line">            <span class="keyword">while</span>(ptr-&gt;next) &#123;</span><br><span class="line">                <span class="keyword">if</span>(ptr-&gt;next-&gt;val &gt; cur-&gt;val) <span class="keyword">break</span>;</span><br><span class="line">                ptr = ptr-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cur-&gt;next = ptr-&gt;next;</span><br><span class="line">            ptr-&gt;next = cur;</span><br><span class="line">            cur = next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> virtual_head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/11/20/1ZKrPNfqeF6Tasi.png" alt="image.png" /></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/11/20/2Vrc5zG8jowfTe9.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="基本算法， 算法， 面试" scheme="https://christopherrliu.github.io/tags/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%EF%BC%8C-%E7%AE%97%E6%B3%95%EF%BC%8C-%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-chalkboard-xor-game</title>
@@ -35,11 +60,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -64,11 +89,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
@@ -93,11 +118,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -157,11 +182,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -186,13 +211,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
   </entry>
   
@@ -215,13 +240,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="正则" scheme="https://christopherrliu.github.io/tags/%E6%AD%A3%E5%88%99/"/>
     
@@ -248,11 +273,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="记忆化搜索" scheme="https://christopherrliu.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/"/>
     
@@ -279,11 +304,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="树形dp" scheme="https://christopherrliu.github.io/tags/%E6%A0%91%E5%BD%A2dp/"/>
     
@@ -306,11 +331,11 @@
     
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="bfs" scheme="https://christopherrliu.github.io/tags/bfs/"/>
     
@@ -335,11 +360,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="tire树" scheme="https://christopherrliu.github.io/tags/tire%E6%A0%91/"/>
     
@@ -364,13 +389,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="堆" scheme="https://christopherrliu.github.io/tags/%E5%A0%86/"/>
     
@@ -397,11 +422,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="位运算" scheme="https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
@@ -427,13 +452,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
@@ -460,13 +485,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="单调栈" scheme="https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
     
@@ -491,11 +516,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="计数排序" scheme="https://christopherrliu.github.io/tags/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/"/>
     
@@ -520,11 +545,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="javascript" scheme="https://christopherrliu.github.io/tags/javascript/"/>
     
     <category term="AC自动机" scheme="https://christopherrliu.github.io/tags/AC%E8%87%AA%E5%8A%A8%E6%9C%BA/"/>
     
@@ -551,11 +576,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
@@ -579,7 +604,7 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
@@ -587,38 +612,9 @@
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="树形dp" scheme="https://christopherrliu.github.io/tags/%E6%A0%91%E5%BD%A2dp/"/>
-    
-    <category term="dfs" scheme="https://christopherrliu.github.io/tags/dfs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每天一道leetcode-maximum-sum-bst-in-binary-tree</title>
-    <link href="https://christopherrliu.github.io/2020/11/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-sum-bst-in-binary-tree/"/>
-    <id>https://christopherrliu.github.io/2020/11/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-sum-bst-in-binary-tree/</id>
-    <published>2020-11-12T05:43:48.000Z</published>
-    <updated>2020-11-12T05:54:32.891Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/11/12/ILVHJAq87OaivGx.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/11/12/U7abC3kwR5ZSJKI.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>因为求的是子树，所以分析每棵子树，我们假设当前节点为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>u</mi><mi>r</mi><mi>P</mi><mi>t</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">curPtr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mord mathit">u</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>，想要使当前子树成为合法的二叉搜索树，就要满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mi>s</mi><mi>o</mi><mi>n</mi><mo>−</mo><mo>&gt;</mo><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi><mo>&lt;</mo><mi>c</mi><mi>u</mi><mi>r</mi><mi>P</mi><mi>t</mi><mi>r</mi><mo>−</mo><mo>&gt;</mo><mi>v</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>&lt;</mo><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mi>s</mi><mi>o</mi><mi>n</mi><mo>−</mo><mo>&gt;</mo><mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">leftson-&gt;upper &lt; curPtr-&gt;vall &lt; rightson-&gt;lower</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">t</span><span class="mord mathit">s</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mrel">&gt;</span><span class="mord mathit">u</span><span class="mord mathit">p</span><span class="mord mathit">p</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mrel">&lt;</span><span class="mord mathit">c</span><span class="mord mathit">u</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">−</span><span class="mrel">&gt;</span><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mrel">&lt;</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">h</span><span class="mord mathit">t</span><span class="mord mathit">s</span><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mbin">−</span><span class="mrel">&gt;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>，所以我们需要记录每个合法子树的上下界和元素和，利用回溯逐次向上更新即可，一些细节见代码</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pp;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>, pp&gt; state;</span><br><span class="line">    <span class="function">state <span class="title">dfs</span><span class="params">(TreeNode* treePtr)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//空子树不影响更新，将上下界设为极大值和极小值</span></span><br><span class="line">        <span class="keyword">if</span>(treePtr == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="built_in">make_pair</span>(<span class="number">0</span>, <span class="built_in">make_pair</span>(INT_MAX, -INT_MAX));</span><br><span class="line">        state leftSubTree = dfs(treePtr-&gt;left);</span><br><span class="line">        state rightSubTree = dfs(treePtr-&gt;right);</span><br><span class="line">        <span class="keyword">int</span> sum, lo, up;</span><br><span class="line">        sum = lo = up = treePtr-&gt;val;</span><br><span class="line">        <span class="keyword">if</span>(leftSubTree.second.second &lt; treePtr-&gt;val &amp;&amp; rightSubTree.second.first &gt; treePtr-&gt;val) &#123;</span><br><span class="line">            sum += leftSubTree.first + rightSubTree.first;</span><br><span class="line">            lo = leftSubTree.second.first == INT_MAX ? lo : leftSubTree.second.first;</span><br><span class="line">            up = rightSubTree.second.second == -INT_MAX ? up : rightSubTree.second.second;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 当前子树已经不能组成搜索树，父辈子树也不能了，将上下界设为极小值和极大值</span></span><br><span class="line">            sum = <span class="number">0</span>;</span><br><span class="line">            lo = -INT_MAX;</span><br><span class="line">            up = INT_MAX;</span><br><span class="line">        &#125;</span><br><span class="line">        ans = max(ans, sum);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">make_pair</span>(sum, <span class="built_in">make_pair</span>(lo, up));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxSumBST</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        dfs(root);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/11/12/OodhnsG568MqEFf.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度与栈空间有关，最坏为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
-&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/11/12/ILVHJAq87OaivGx.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
-    
-    
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="dfs" scheme="https://christopherrliu.github.io/tags/dfs/"/>
     
