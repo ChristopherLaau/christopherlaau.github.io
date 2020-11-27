@@ -26,25 +26,24 @@
 
   <meta name="description" content="题意  英文题意">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每天一道leetcode-reaching-points">
-<meta property="og:url" content="https://christopherrliu.github.io/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/index.html">
+<meta property="og:title" content="每天一道leetcode-maximum-gap">
+<meta property="og:url" content="https://christopherrliu.github.io/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/index.html">
 <meta property="og:site_name" content="Christopherの博客">
 <meta property="og:description" content="题意  英文题意">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/11/21/gowjKbEGN8IevUF.png">
-<meta property="og:image" content="https://i.loli.net/2020/11/21/8YA9MwfyLkFxpaH.png">
-<meta property="og:image" content="https://i.loli.net/2020/11/21/IZvwDPFeiOxMQYa.png">
-<meta property="article:published_time" content="2020-11-21T07:28:31.000Z">
-<meta property="article:modified_time" content="2020-11-21T07:36:36.577Z">
+<meta property="og:image" content="https://i.loli.net/2020/11/26/UPeTLWdoGYMHuAa.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/26/HfQJjLx2BCeaKlX.png">
+<meta property="og:image" content="https://i.loli.net/2020/11/27/BWKuPj8VNhvzMbQ.png">
+<meta property="article:published_time" content="2020-11-26T12:19:08.000Z">
+<meta property="article:modified_time" content="2020-11-27T03:33:42.723Z">
 <meta property="article:author" content="Christopher Liu">
+<meta property="article:tag" content="C++">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="面试">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="迭代">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/11/21/gowjKbEGN8IevUF.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/11/26/UPeTLWdoGYMHuAa.png">
 
-<link rel="canonical" href="https://christopherrliu.github.io/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/">
+<link rel="canonical" href="https://christopherrliu.github.io/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/">
 
 
 <script id="page-configurations">
@@ -57,7 +56,7 @@
   };
 </script>
 
-  <title>每天一道leetcode-reaching-points | Christopherの博客</title>
+  <title>每天一道leetcode-maximum-gap | Christopherの博客</title>
   
 
 
@@ -186,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/">
+    <link itemprop="mainEntityOfPage" href="https://christopherrliu.github.io/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/myavatar.png">
@@ -199,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          每天一道leetcode-reaching-points
+          每天一道leetcode-maximum-gap
         </h1>
 
         <div class="post-meta">
@@ -208,10 +207,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-11-21 15:28:31 / 修改时间：15:36:36" itemprop="dateCreated datePublished" datetime="2020-11-21T15:28:31+08:00">2020-11-21</time>
+              <time title="创建时间：2020-11-26 20:19:08" itemprop="dateCreated datePublished" datetime="2020-11-26T20:19:08+08:00">2020-11-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-27 11:33:42" itemprop="dateModified" datetime="2020-11-27T11:33:42+08:00">2020-11-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -239,8 +244,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -250,7 +255,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>631</span>
+              <span>944</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -271,16 +276,19 @@
       
         <h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3>
 <h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4>
-<p><img src="https://i.loli.net/2020/11/21/gowjKbEGN8IevUF.png" alt="" /></p>
+<p><img src="https://i.loli.net/2020/11/26/UPeTLWdoGYMHuAa.png" alt="" /></p>
 <a id="more"></a>
 <h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4>
-<p><img src="https://i.loli.net/2020/11/21/8YA9MwfyLkFxpaH.png" alt="" /></p>
+<p><img src="https://i.loli.net/2020/11/26/HfQJjLx2BCeaKlX.png" alt="" /></p>
 <h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
-<p>对于目标点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>来说，只能从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a,a-b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mbin">−</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo>−</mo><mi>b</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a-b,b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mbin">−</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>转移来，又因为不存在负值，所以只能是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">max(a, b)-min(a,b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mbin">−</span><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>，这种转移状态只有当<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mi mathvariant="normal">%</mi><mi>b</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a \% b, b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mord mathrm">%</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>或<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>a</mi><mi mathvariant="normal">%</mi><mi>b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(a,a\%b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mord mathrm">%</span><span class="mord mathit">b</span><span class="mclose">)</span></span></span></span>才会停止，注意在转移中处理边界</p>
-<p>这种方法有点像辗转相除法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">similarGcd</span>(<span class="params">self, sx: int, sy: int, tx: int, ty: int</span>) :</span></span><br><span class="line">        <span class="keyword">while</span> tx &gt;= sx <span class="keyword">and</span> ty &gt;= sy :</span><br><span class="line">            <span class="keyword">if</span> tx &lt; ty :</span><br><span class="line">                <span class="keyword">if</span> tx &gt; sx : ty %= tx</span><br><span class="line">                <span class="keyword">else</span> : <span class="keyword">return</span> (ty - sy) % tx == <span class="number">0</span></span><br><span class="line">            <span class="keyword">elif</span> tx &gt; ty : </span><br><span class="line">                <span class="keyword">if</span> ty &gt; sy : tx %= ty</span><br><span class="line">                <span class="keyword">else</span> : <span class="keyword">return</span> (tx - sx) % ty == <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span> :</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> tx == sx <span class="keyword">and</span> ty == sy</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reachingPoints</span>(<span class="params">self, sx: int, sy: int, tx: int, ty: int</span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> self.similarGcd(sx, sy, tx, ty)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2020/11/21/IZvwDPFeiOxMQYa.png" alt="" /></p>
-<p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mi>t</mi><mi>x</mi><mo separator="true">,</mo><mi>t</mi><mi>y</mi><mo>)</mo><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">O(log(max(tx,ty)))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathit">m</span><span class="mord mathit">a</span><span class="mord mathit">x</span><span class="mopen">(</span><span class="mord mathit">t</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p>
+<h3 id="暴力"><a class="markdownIt-Anchor" href="#暴力"></a> 暴力</h3>
+<p>直接排序+模拟</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maximumGap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        sort(nums.begin(), nums.end());</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">            res = max(res, nums[i] - nums[i  - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="基数排序"><a class="markdownIt-Anchor" href="#基数排序"></a> 基数排序</h4>
+<p>想要达到线性复杂度，可以使用基数排序，时间复杂度可以达到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maximumGap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">if</span>(n &lt; <span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        bucket.resize(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> maxValue = *max_element(nums.begin(), nums.end());</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> <span class="built_in">exp</span> = <span class="number">1</span>; <span class="built_in">exp</span> &lt;= maxValue; <span class="built_in">exp</span> *= <span class="number">10</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">                <span class="keyword">int</span> digit = (num / <span class="built_in">exp</span>) % <span class="number">10</span>;</span><br><span class="line">                bucket[digit].push_back(num);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>, cnt = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">auto</span> num : bucket[i]) &#123;</span><br><span class="line">                    nums[cnt++] = num;</span><br><span class="line">                &#125;</span><br><span class="line">                bucket[i].clear();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">            res = max(res, nums[i] - nums[i - <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; bucket;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2020/11/27/BWKuPj8VNhvzMbQ.png" alt="" /></p>
+<p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>
 
     </div>
 
@@ -307,12 +315,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span> <a href="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/">每天一道leetcode-reaching-points</a></p>
+  <p><span>本文标题:</span> <a href="/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/">每天一道leetcode-maximum-gap</a></p>
   <p><span>文章作者:</span> <a href="/" title="访问 Christopher Liu 的个人博客">Christopher Liu</a></p>
-  <p><span>发布时间:</span> 2020年11月21日 - 15:11</p>
-  <p><span>最后更新:</span> 2020年11月21日 - 15:11</p>
-  <p><span>原始链接:</span> <a href="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/" title="每天一道leetcode-reaching-points">https://christopherrliu.github.io/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reaching-points/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span> 2020年11月26日 - 20:11</p>
+  <p><span>最后更新:</span> 2020年11月27日 - 11:11</p>
+  <p><span>原始链接:</span> <a href="/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/" title="每天一道leetcode-maximum-gap">https://christopherrliu.github.io/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://christopherrliu.github.io/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-gap/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><!--<i class="fa fa-creative-commons"></i> -->
   <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -336,10 +344,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> C++</a>
               <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 算法</a>
               <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 面试</a>
-              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> python</a>
-              <a href="/tags/%E8%BF%AD%E4%BB%A3/" rel="tag"><i class="fa fa-tag"></i></a><!--#--> 迭代</a>
           </div>
 
         
@@ -348,13 +355,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sort-list/" rel="prev" title="每天一道leetcode-sort-list">
-      <i class="fa fa-chevron-left"></i> 每天一道leetcode-sort-list
+    <a href="/2020/11/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-wildcard-matching/" rel="prev" title="每天一道leetcode-wildcard-matching">
+      <i class="fa fa-chevron-left"></i> 每天一道leetcode-wildcard-matching
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-count-different-palindromic-subsequences/" rel="next" title="每天一道leetcode-count-different-palindromic-subsequences">
-      每天一道leetcode-count-different-palindromic-subsequences <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -414,7 +418,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text"> 题意</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> 英文题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E9%A2%98%E6%84%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> 中文题意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B"><span class="nav-number">3.</span> <span class="nav-text"> 暴力</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text"> 基数排序</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
