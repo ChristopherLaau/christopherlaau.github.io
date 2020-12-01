@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://christopherrliu.github.io/2020/12/01/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-validate-ip-address/</loc>
+    
+    <lastmod>2020-12-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/2020/12/01/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-132-pattern/</loc>
+    
+    <lastmod>2020-12-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/2020/12/01/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-super-palindromes/</loc>
     
     <lastmod>2020-12-01</lastmod>
@@ -942,133 +956,7 @@
 
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/C/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://christopherrliu.github.io/tags/VPS/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/c/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/python/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/javascript/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E8%BD%AE%E5%BB%93%E7%BA%BF%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%A0%86/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%B7%AE%E5%88%86/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1110,6 +998,69 @@
   </url>
   
   <url>
+    <loc>https://christopherrliu.github.io/tags/c/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/python/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/javascript/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://christopherrliu.github.io/tags/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
@@ -1124,63 +1075,70 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/nlp/</loc>
+    <loc>https://christopherrliu.github.io/tags/C/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/sequence-generation/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/BERT/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/GPT-2/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E8%BD%AE%E5%BB%93%E7%BA%BF%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/bert/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/summarization/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%A0%86/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/pretrained-model/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%B7%AE%E5%88%86/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/transformer/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E6%8A%98%E5%8D%8A%E6%9E%9A%E4%B8%BE/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1195,13 +1153,6 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%8A%98%E5%8D%8A%E6%9E%9A%E4%B8%BE/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1285,13 +1236,6 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/dfs/</loc>
-    <lastmod>2020-12-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://christopherrliu.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
@@ -1300,6 +1244,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/tags/%E5%87%B8%E5%8C%85/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/dfs/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1467,14 +1418,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1502,14 +1453,14 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E6%80%9D%E6%83%B3/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E5%AE%B9%E6%96%A5/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/tags/%E5%AE%B9%E6%96%A5/</loc>
+    <loc>https://christopherrliu.github.io/tags/%E6%80%9D%E6%83%B3/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1543,17 +1494,73 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://christopherrliu.github.io/tags/nlp/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
+    <loc>https://christopherrliu.github.io/tags/sequence-generation/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/BERT/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/GPT-2/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/bert/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/summarization/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/pretrained-model/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/tags/transformer/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://christopherrliu.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1574,7 +1581,7 @@
   </url>
   
   <url>
-    <loc>https://christopherrliu.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <loc>https://christopherrliu.github.io/categories/leetcode/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1582,6 +1589,13 @@
   
   <url>
     <loc>https://christopherrliu.github.io/categories/true/</loc>
+    <lastmod>2020-12-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://christopherrliu.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2020-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
