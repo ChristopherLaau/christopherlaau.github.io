@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-12-05T08:55:13.012Z</updated>
+  <updated>2020-12-05T09:23:08.415Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-maximum-width-ramp</title>
+    <link href="https://christopherrliu.github.io/2020/12/05/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-width-ramp/"/>
+    <id>https://christopherrliu.github.io/2020/12/05/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-maximum-width-ramp/</id>
+    <published>2020-12-05T09:16:36.000Z</published>
+    <updated>2020-12-05T09:23:08.415Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/05/Ubkyo6X1GpZl8aD.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/05/rYfQLN6nmZdgJD8.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>栈维护一个单调递减序列，然后逆序遍历序列，若A[i] \ge 栈顶元素，就出栈（肯定已经是当前栈顶元素的最长坡），并更新答案</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxWidthRamp</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = A.size();</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; sta;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(sta.size() == <span class="number">0</span> || A[sta.back()] &gt; A[i]) sta.push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            <span class="keyword">while</span>(sta.size() &amp;&amp; A[sta.back()] &lt;= A[i]) &#123;</span><br><span class="line">                res = max(res, i - sta.back());</span><br><span class="line">                sta.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/05/ICAKZgfO2Qzw8V1.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/05/Ubkyo6X1GpZl8aD.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="单调栈" scheme="https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-task-scheduler</title>
@@ -70,9 +99,9 @@
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -590,37 +619,6 @@
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="二分" scheme="https://christopherrliu.github.io/tags/%E4%BA%8C%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每天一道leetcode-find-two-non-overlapping-sub-arrays-each-with-target-sum</title>
-    <link href="https://christopherrliu.github.io/2020/12/01/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-two-non-overlapping-sub-arrays-each-with-target-sum/"/>
-    <id>https://christopherrliu.github.io/2020/12/01/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-two-non-overlapping-sub-arrays-each-with-target-sum/</id>
-    <published>2020-12-01T02:59:47.000Z</published>
-    <updated>2020-12-01T03:08:23.144Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/01/9yS5J2gcuvGft3U.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/01/xgewWyYbTkujGHh.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>双指针找出所有满足题意得区间，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">left[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">t</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>表示以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>结尾得满足条件得区间得左端点，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>u</mi><mi>m</mi><mo>[</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">minium[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">i</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span></span></span></span>表示右端点小于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>的所有合法区间的最小长度，则答案就是最小的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>−</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>+</mo><mn>1</mn><mo>+</mo><mi>m</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>u</mi><mi>m</mi><mo>[</mo><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>−</mo><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">i - left[i] + 1 + minium[left[i] - 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">t</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit">i</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">t</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">]</span></span></span></span></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minSumOfLengths</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = arr.size();</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = <span class="number">0</span>, sum = arr[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">1e9</span>;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">left</span><span class="params">(n, <span class="number">-1e9</span>)</span></span>;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">minium</span><span class="params">(n)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(l &lt; n) &#123;</span><br><span class="line">            <span class="keyword">while</span>(r &lt; n - <span class="number">1</span> &amp;&amp; sum &lt; target) sum += arr[++r];</span><br><span class="line">            <span class="keyword">if</span>(target == sum) left[r] = l;</span><br><span class="line">            sum -= arr[l];</span><br><span class="line">            <span class="keyword">if</span>(left[l] &gt;= <span class="number">1</span>) res = min(res, l - left[l] + <span class="number">1</span> + minium[left[l] - <span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">if</span>(l) minium[l] = min(minium[l - <span class="number">1</span>], l - left[l] + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">else</span>  minium[l] = l - left[l] + <span class="number">1</span>;</span><br><span class="line">            l++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res == <span class="number">1e9</span> ? <span class="number">-1</span> : res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/01/Y7fNGURIKlyzrZP.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
-&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/01/9yS5J2gcuvGft3U.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
-    
-    
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
-    
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
