@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-12-12T04:35:59.781Z</updated>
+  <updated>2020-12-12T11:42:13.193Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-path-with-maximum-probability</title>
+    <link href="https://christopherrliu.github.io/2020/12/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-path-with-maximum-probability/"/>
+    <id>https://christopherrliu.github.io/2020/12/12/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-path-with-maximum-probability/</id>
+    <published>2020-12-12T11:36:03.000Z</published>
+    <updated>2020-12-12T11:42:13.193Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/12/fspFmZUoYwQavd4.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/12/OG6T7BUCtRFxLSo.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>显然是一个最短路问题，只不过现在变成了边权相乘，那么我们可以取对数变成边权相加：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>r</mi><mi>o</mi><msub><mi>b</mi><mn>1</mn></msub><mo>∗</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>o</mi><msub><mi>b</mi><mn>2</mn></msub><mo>=</mo><mo>&gt;</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>p</mi><mi>r</mi><mi>o</mi><msub><mi>b</mi><mn>1</mn></msub><mo>)</mo><mo>+</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>p</mi><mi>r</mi><mi>o</mi><msub><mi>b</mi><mn>2</mn></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">prob_1*preob_2=&gt;log(prob_1) + log(prob_2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">∗</span><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">e</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mrel">&gt;</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span>，然后就变成了求最长路；最长路属于np难问题，但是这个题来说由于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>b</mi><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">prob\le 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord mathit">b</span><span class="mrel">≤</span><span class="mord mathrm">1</span></span></span></span>，则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>p</mi><mi>r</mi><mi>o</mi><mi>b</mi><mo>)</mo><mo>≤</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">log(prob)\le0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathit">p</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">o</span><span class="mord mathit">b</span><span class="mclose">)</span><span class="mrel">≤</span><span class="mord mathrm">0</span></span></span></span>，那么可以取负数求最短路</p><p>最短路用堆优化的dijktra算法</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> graph &#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">bool</span> vis[<span class="number">10001</span>];</span><br><span class="line">    <span class="keyword">double</span> dist[<span class="number">10001</span>];</span><br><span class="line">    <span class="keyword">using</span> pid = <span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">double</span>&gt;;</span><br><span class="line">    <span class="keyword">using</span> pdi = <span class="built_in">pair</span>&lt;<span class="keyword">double</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line">    <span class="built_in">vector</span>&lt;pid&gt; edges[<span class="number">10001</span>];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n_)</span> </span>&#123;</span><br><span class="line">        n = n_;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10001</span>; ++i) edges[i].clear();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; edges_, <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;&amp; succProb_)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = edges_.size();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> u = edges_[i][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">int</span> v = edges_[i][<span class="number">1</span>];</span><br><span class="line">            edges[u].push_back(&#123;v, -log2(succProb_[i])&#125;);</span><br><span class="line">            edges[v].push_back(&#123;u, -log2(succProb_[i])&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> e)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            vis[i] = <span class="literal">false</span>;</span><br><span class="line">            dist[i] = <span class="number">1e9</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        dist[s] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">priority_queue</span>&lt;pdi, <span class="built_in">vector</span>&lt;pdi&gt;, greater&lt;pdi&gt;&gt; que;</span><br><span class="line">        que.push(&#123;<span class="number">0.0</span>, s&#125;);</span><br><span class="line">        <span class="keyword">while</span>(que.size()) &#123;</span><br><span class="line">            pdi cur = que.top();</span><br><span class="line">            que.pop();</span><br><span class="line">            <span class="keyword">int</span> u = cur.second;</span><br><span class="line">            <span class="keyword">if</span>(u == e) <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">if</span>(vis[u]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[u] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; nxt : edges[u]) &#123;</span><br><span class="line">                <span class="keyword">int</span> v = nxt.first;</span><br><span class="line">                <span class="keyword">double</span> len = nxt.second;</span><br><span class="line">                <span class="keyword">if</span>(dist[v] &gt; dist[u] + len) &#123;</span><br><span class="line">                    dist[v] = dist[u] + len;</span><br><span class="line">                    <span class="keyword">if</span>(!vis[v]) &#123;</span><br><span class="line">                        que.push(&#123;dist[v], v&#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">return</span> dist[e] == <span class="number">1e9</span> ? <span class="number">0.0</span> : <span class="built_in">pow</span>(<span class="number">2</span>, -dist[e]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">maxProbability</span><span class="params">(<span class="keyword">int</span> n, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; edges, <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt;&amp; succProb, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        graph::init(n);</span><br><span class="line">        graph::build(edges, succProb);</span><br><span class="line">        <span class="keyword">return</span> graph::dijkstra(start, end);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/12/F3h9dKA4LNaHB1J.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/12/fspFmZUoYwQavd4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="图" scheme="https://christopherrliu.github.io/tags/%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-elimination-game</title>
@@ -35,11 +66,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -64,13 +95,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
   </entry>
   
@@ -93,11 +124,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="搜索" scheme="https://christopherrliu.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
     
@@ -108,28 +139,25 @@
     <link href="https://christopherrliu.github.io/2020/12/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-a-value-of-a-mysterious-function-closest-to-target/"/>
     <id>https://christopherrliu.github.io/2020/12/11/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-find-a-value-of-a-mysterious-function-closest-to-target/</id>
     <published>2020-12-11T11:37:23.000Z</published>
-    <updated>2020-12-11T12:22:13.972Z</updated>
+    <updated>2020-12-12T06:03:30.359Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/11/hZzgsvAf3BLnMwk.png" alt="" /></p><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/11/5o8gkZahK9v3STb.png" alt="" /></p><h3 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h3><p>做本题需要知道<code>&amp;</code>的性质</p><ul><li><p>一个数<code>&amp;</code>上其他数得到的结果是非递增的，因为二进制位的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>不会变成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>，二进制的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>却会变成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span></p></li><li><p>一个数与其他所有的数<code>&amp;</code>的结果不会超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>n</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">one\_number(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.06em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">b</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>个，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>n</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">one\_number</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:1.00444em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">b</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>指的是二进制中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>的个数</p></li></ul><p>基于上述两个性质，我们可以维护一个集合，存储对应于每个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mo>(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">func(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">u</span><span class="mord mathit">n</span><span class="mord mathit">c</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>，每次<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><mi>r</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r=r+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span>，就拿出集合中的元素依次与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi><mo>[</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">arr[r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span>做<code>&amp;</code>操作再放入集合中，在此过程中维护答案</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">closestToTarget</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1e9</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vals;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : arr) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp = &#123;val&#125;;</span><br><span class="line">            ans = min(ans, <span class="built_in">abs</span>(val - target));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pval: vals) &#123;</span><br><span class="line">                tmp.push_back(pval &amp; val);</span><br><span class="line">                ans = min(ans, <span class="built_in">abs</span>(tmp.back() - target));</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.erase(unique(tmp.begin(), tmp.end()), tmp.end());</span><br><span class="line">            vals = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/11/brTzWOA4PHBvSJs.png" alt="" /></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">closestToTarget</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1e9</span>;</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; vals;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : arr) &#123;</span><br><span class="line">            <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; tmp = &#123;val&#125;;</span><br><span class="line">            ans = min(ans, <span class="built_in">abs</span>(val - target));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pval: vals) &#123;</span><br><span class="line">                tmp.insert(pval &amp; val);</span><br><span class="line">                ans = min(ans, <span class="built_in">abs</span>((pval &amp; val) - target));</span><br><span class="line">            &#125;</span><br><span class="line">            vals = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/11/to1HDqdV3CAxvnh.png" alt="" /></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/11/hZzgsvAf3BLnMwk.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/11/5o8gkZahK9v3STb.png" alt="" /></p><h3 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h3><p>做本题需要知道<code>&amp;</code>的性质</p><ul><li><p>一个数<code>&amp;</code>上其他数得到的结果是非递增的，因为二进制位的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>不会变成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>，二进制的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>却会变成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span></p></li><li><p>一个数与其他所有的数<code>&amp;</code>的结果不会超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>n</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">one\_number(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.06em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">b</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>个，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>o</mi><mi>n</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">one\_number</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:1.00444em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mord mathit">o</span><span class="mord mathit">n</span><span class="mord mathit">e</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">b</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>指的是二进制中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>的个数</p></li></ul><p>基于上述两个性质，我们可以维护一个集合，存储对应于每个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mo>(</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">func(l,r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">u</span><span class="mord mathit">n</span><span class="mord mathit">c</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>，每次<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><mi>r</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r=r+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span>，就拿出集合中的元素依次与<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi><mo>[</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">arr[r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span>做<code>&amp;</code>操作再放入集合中，在此过程中维护答案</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">closestToTarget</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1e9</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vals;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : arr) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp = &#123;val&#125;;</span><br><span class="line">            ans = min(ans, <span class="built_in">abs</span>(val - target));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pval: vals) &#123;</span><br><span class="line">                tmp.push_back(pval &amp; val);</span><br><span class="line">                ans = min(ans, <span class="built_in">abs</span>(tmp.back() - target));</span><br><span class="line">            &#125;</span><br><span class="line">            tmp.erase(unique(tmp.begin(), tmp.end()), tmp.end());</span><br><span class="line">            vals = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/11/brTzWOA4PHBvSJs.png" alt="" /></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">closestToTarget</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1e9</span>;</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; vals;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; val : arr) &#123;</span><br><span class="line">            <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; tmp = &#123;val&#125;;</span><br><span class="line">            ans = min(ans, <span class="built_in">abs</span>(val - target));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pval: vals) &#123;</span><br><span class="line">                tmp.insert(pval &amp; val);</span><br><span class="line">                ans = min(ans, <span class="built_in">abs</span>((pval &amp; val) - target));</span><br><span class="line">            &#125;</span><br><span class="line">            vals = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/11/to1HDqdV3CAxvnh.png" alt="" /></p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
 &lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;</summary>
-      
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/11/hZzgsvAf3BLnMwk.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
     
     
     
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -154,11 +182,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="图" scheme="https://christopherrliu.github.io/tags/%E5%9B%BE/"/>
     
@@ -183,13 +211,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -212,11 +240,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="链表" scheme="https://christopherrliu.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
     
@@ -243,11 +271,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="树" scheme="https://christopherrliu.github.io/tags/%E6%A0%91/"/>
     
@@ -274,11 +302,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -303,17 +331,17 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
     
     <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -336,11 +364,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -367,11 +395,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
     
@@ -398,13 +426,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -427,13 +455,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -456,11 +484,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -487,11 +515,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="二分" scheme="https://christopherrliu.github.io/tags/%E4%BA%8C%E5%88%86/"/>
     
@@ -549,11 +577,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -580,46 +608,15 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="贪心" scheme="https://christopherrliu.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每天一道leetcode-odd-even-jump</title>
-    <link href="https://christopherrliu.github.io/2020/12/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-odd-even-jump/"/>
-    <id>https://christopherrliu.github.io/2020/12/07/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-odd-even-jump/</id>
-    <published>2020-12-07T05:36:31.000Z</published>
-    <updated>2020-12-07T05:45:33.624Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/07/7dYhH3pVkBROFcL.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/07/Xq2gEM5yuLUIled.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>生成一个下标数组，根据以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>[</mo><mi>i</mi><mi>d</mi><mi>x</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">A[idx]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mord mathit">d</span><span class="mord mathit">x</span><span class="mclose">]</span></span></span></span>为key去排序下标数组，然后就可以在下标数组上用单调栈求出每个位置奇数跳跃和偶数跳跃的下一个位置，然后用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i][0/1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">/</span><span class="mord mathrm">1</span><span class="mclose">]</span></span></span></span>分别表示在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>进行偶数和奇数跳跃时能否到达终点，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mn>0</mn><mo>]</mo><mo>=</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>n</mi><mi>x</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>]</mo><mo>[</mo><mn>1</mn><mo>]</mo><mo separator="true">,</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mn>1</mn><mo>]</mo><mo>=</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>n</mi><mi>x</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>o</mi><mi>d</mi><mi>d</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>]</mo><mo>[</mo><mn>0</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i][0] = dp[nxt\_even[i]][1],dp[i][1] = dp[nxt\_odd[i]][0]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.06em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">n</span><span class="mord mathit">x</span><span class="mord mathit">t</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mord mathit">e</span><span class="mord mathit">n</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">n</span><span class="mord mathit">x</span><span class="mord mathit">t</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mord mathit">d</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mclose">]</span></span></span></span>，若<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mn>1</mn><mo>]</mo><mo>=</mo><mi>t</mi><mi>r</mi><mi>u</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">dp[i][1]=true</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mrel">=</span><span class="mord mathit">t</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">u</span><span class="mord mathit">e</span></span></span></span>，答案就加一</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">typedef</span> <span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pp;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">get_nxt</span><span class="params">(<span class="built_in">vector</span>&lt;pp&gt;&amp; nxt, <span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; idxs, <span class="keyword">int</span> start, <span class="keyword">int</span> end, <span class="keyword">int</span> step, <span class="keyword">int</span> flag)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; sta;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = start; i != end; i += step) &#123;</span><br><span class="line">            <span class="keyword">while</span>(sta.size() &amp;&amp; sta.back() &lt;= idxs[i]) &#123;</span><br><span class="line">                <span class="keyword">if</span>(flag) nxt[sta.back()].second = idxs[i];</span><br><span class="line">                <span class="keyword">else</span> nxt[sta.back()].first = idxs[i];</span><br><span class="line">                sta.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">            sta.push_back(idxs[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">oddEvenJumps</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = A.size();</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; idxs;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;pp&gt; <span class="title">dp</span><span class="params">(n + <span class="number">1</span>, &#123;<span class="literal">false</span>, <span class="literal">false</span>&#125;)</span></span>;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;pp&gt; <span class="title">nxt</span><span class="params">(n, &#123;n, n&#125;)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) idxs.push_back(i);</span><br><span class="line"></span><br><span class="line">        sort(idxs.begin(), idxs.end(), [&amp;](<span class="keyword">const</span> <span class="keyword">int</span>&amp; a, <span class="keyword">const</span> <span class="keyword">int</span>&amp; b)&#123;</span><br><span class="line">            <span class="keyword">return</span> A[a] == A[b] ? a &lt; b : A[a] &lt; A[b];</span><br><span class="line">        &#125;);</span><br><span class="line">        get_nxt(nxt, idxs, <span class="number">0</span>, n, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        sort(idxs.begin(), idxs.end(), [&amp;](<span class="keyword">const</span> <span class="keyword">int</span>&amp; a, <span class="keyword">const</span> <span class="keyword">int</span>&amp; b)&#123;</span><br><span class="line">            <span class="keyword">return</span> A[a] == A[b] ? a &gt; b : A[a] &lt; A[b];</span><br><span class="line">        &#125;);</span><br><span class="line">        get_nxt(nxt, idxs, n - <span class="number">1</span>, <span class="number">-1</span>, <span class="number">-1</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        dp[n - <span class="number">1</span>] = &#123;<span class="literal">true</span>, <span class="literal">true</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = n - <span class="number">2</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            dp[i].first = dp[nxt[i].first].second;</span><br><span class="line">            dp[i].second = dp[nxt[i].second].first;</span><br><span class="line">            <span class="keyword">if</span>(dp[i].first) res++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/07/yIVxUtplinqTZOY.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
-&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/07/7dYhH3pVkBROFcL.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
-    
-    
-    <category term="单调栈" scheme="https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
-    
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
