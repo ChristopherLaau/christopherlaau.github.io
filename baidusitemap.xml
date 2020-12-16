@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://christopherrliu.github.io/2020/12/16/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-word-pattern/</loc>
+    <lastmod>2020-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://christopherrliu.github.io/2020/12/15/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-jump-game-iv/</loc>
+    <lastmod>2020-12-15</lastmod>
+  </url>
+  <url>
+    <loc>https://christopherrliu.github.io/2020/12/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-group-anagrams/</loc>
+    <lastmod>2020-12-14</lastmod>
+  </url>
+  <url>
     <loc>https://christopherrliu.github.io/2020/12/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-delivering-boxes-from-storage-to-ports/</loc>
     <lastmod>2020-12-14</lastmod>
   </url>
