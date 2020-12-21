@@ -6,7 +6,7 @@
   <link href="https://christopherrliu.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherrliu.github.io/"/>
-  <updated>2020-12-21T03:53:56.628Z</updated>
+  <updated>2020-12-21T06:25:55.616Z</updated>
   <id>https://christopherrliu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每天一道leetcode-numbers-with-repeated-digits</title>
+    <link href="https://christopherrliu.github.io/2020/12/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-numbers-with-repeated-digits/"/>
+    <id>https://christopherrliu.github.io/2020/12/21/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-numbers-with-repeated-digits/</id>
+    <published>2020-12-21T06:22:52.000Z</published>
+    <updated>2020-12-21T06:25:55.616Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/21/tQRhr2ImJALVvuf.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/21/yDPaFdrXzljfOoK.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>正难则反，转化为求不重复数字的个数，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">status</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">t</span><span class="mord mathit">a</span><span class="mord mathit">t</span><span class="mord mathit">u</span><span class="mord mathit">s</span></span></span></span>记录已经用过的数字，自顶向下记忆化搜索</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">get_digits</span><span class="params">(<span class="keyword">int</span> n, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; digits)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(n) &#123;</span><br><span class="line">            digits.emplace_back(n % <span class="number">10</span>);</span><br><span class="line">            n /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numDupDigitsAtMostN</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; digits;</span><br><span class="line">        function&lt;<span class="keyword">int</span>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">bool</span>, <span class="keyword">bool</span>)&gt; dfs = [&amp;](<span class="keyword">int</span> pos, <span class="keyword">int</span> status, <span class="keyword">bool</span> limit, <span class="keyword">bool</span> leading_zero) &#123;</span><br><span class="line">            <span class="keyword">if</span>(pos &lt; <span class="number">0</span>) </span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(dp[pos][status][limit][leading_zero] != <span class="number">-1</span>)</span><br><span class="line">                <span class="keyword">return</span> dp[pos][status][limit][leading_zero];</span><br><span class="line">            <span class="keyword">int</span> up = limit ? digits[pos] : <span class="number">9</span>;</span><br><span class="line">            <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> nxt = <span class="number">0</span>; nxt &lt;= up; ++nxt) &#123;</span><br><span class="line">                <span class="keyword">if</span>(status &amp; (<span class="number">1</span> &lt;&lt; nxt))</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">int</span> nxt_status = (leading_zero &amp;&amp; !nxt) ? status : status | (<span class="number">1</span> &lt;&lt; nxt);</span><br><span class="line">                res += dfs(pos - <span class="number">1</span>, nxt_status, limit &amp;&amp; nxt == digits[pos], leading_zero &amp;&amp; nxt == <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> dp[pos][status][limit][leading_zero] = res;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        get_digits(N, digits);</span><br><span class="line">        <span class="built_in">memset</span>(dp, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> N - dfs(digits.size() - <span class="number">1</span>, <span class="number">0</span>, <span class="literal">true</span>, <span class="literal">true</span>) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> dp[<span class="number">10</span>][<span class="number">1</span> &lt;&lt; <span class="number">10</span>][<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/21/At8pKROVPEhMgd5.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>N</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(logN)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
+&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/21/tQRhr2ImJALVvuf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-minimum-number-of-refueling-stops</title>
@@ -35,13 +66,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -64,13 +95,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -93,17 +124,17 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
-    
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
     
   </entry>
   
@@ -126,15 +157,15 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
-    
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -159,13 +190,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
+    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
   </entry>
   
@@ -187,13 +218,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="双指针" scheme="https://christopherrliu.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
@@ -226,13 +257,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -255,11 +286,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="单调队列" scheme="https://christopherrliu.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
     
@@ -284,11 +315,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -315,11 +346,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -344,17 +375,17 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
-    
-    <category term="离散化" scheme="https://christopherrliu.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
+    <category term="搜索" scheme="https://christopherrliu.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
     
     <category term="图" scheme="https://christopherrliu.github.io/tags/%E5%9B%BE/"/>
     
-    <category term="搜索" scheme="https://christopherrliu.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
+    <category term="离散化" scheme="https://christopherrliu.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"/>
     
   </entry>
   
@@ -377,15 +408,15 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
-    
-    <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -408,13 +439,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -441,11 +472,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -470,13 +501,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -499,11 +530,11 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherrliu.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -534,13 +565,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherrliu.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -563,15 +594,15 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
+    <category term="python" scheme="https://christopherrliu.github.io/tags/python/"/>
     
     <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
     
   </entry>
   
@@ -594,44 +625,13 @@
     <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
     
     <category term="搜索" scheme="https://christopherrliu.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每天一道leetcode-group-anagrams</title>
-    <link href="https://christopherrliu.github.io/2020/12/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-group-anagrams/"/>
-    <id>https://christopherrliu.github.io/2020/12/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-group-anagrams/</id>
-    <published>2020-12-14T07:39:57.000Z</published>
-    <updated>2020-12-14T07:43:41.999Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2020/12/14/WOzpmEYwoh2cXxl.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2020/12/14/bO5Ztkqm1Ax3lrJ.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>对一个字符串排序，然后用hash表记录其在答案数组中的下标即可</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; <span class="title">groupAnagrams</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; strs)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; str2idx;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; str : strs) &#123;</span><br><span class="line">            <span class="built_in">string</span> tmp = str;</span><br><span class="line">            sort(tmp.begin(), tmp.end());</span><br><span class="line">            <span class="keyword">if</span>(!str2idx.count(tmp)) &#123;</span><br><span class="line">                res.push_back(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;());</span><br><span class="line">                str2idx[tmp] = res.size() - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            res[str2idx[tmp]].push_back(str);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/12/14/M6vPqoxALfubZId.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>k</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nklogk)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>为字符串的平均长度</p>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
-&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/12/14/WOzpmEYwoh2cXxl.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="leetcode" scheme="https://christopherrliu.github.io/categories/leetcode/"/>
-    
-    
-    <category term="算法" scheme="https://christopherrliu.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherrliu.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherrliu.github.io/tags/C/"/>
-    
-    <category term="hash表" scheme="https://christopherrliu.github.io/tags/hash%E8%A1%A8/"/>
-    
-    <category term="字符串" scheme="https://christopherrliu.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
