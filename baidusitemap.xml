@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://christopherlaau.github.io/2021/01/16/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-online-majority-element-in-subarray/</loc>
+    <lastmod>2021-01-16</lastmod>
+  </url>
+  <url>
+    <loc>https://christopherlaau.github.io/2021/01/16/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-bricks-falling-when-hit/</loc>
+    <lastmod>2021-01-16</lastmod>
+  </url>
+  <url>
     <loc>https://christopherlaau.github.io/2021/01/14/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-minimum-moves-to-reach-target-with-rotations/</loc>
     <lastmod>2021-01-14</lastmod>
   </url>
