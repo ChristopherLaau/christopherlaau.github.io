@@ -6,7 +6,7 @@
   <link href="https://christopherlaau.github.io/atom.xml" rel="self"/>
   
   <link href="https://christopherlaau.github.io/"/>
-  <updated>2021-01-16T13:20:34.037Z</updated>
+  <updated>2021-01-17T08:03:20.042Z</updated>
   <id>https://christopherlaau.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode周赛-weekly-contest-224</title>
+    <link href="https://christopherlaau.github.io/2021/01/17/leetcode%E5%91%A8%E8%B5%9B/leetcode%E5%91%A8%E8%B5%9B-weekly-contest-224/"/>
+    <id>https://christopherlaau.github.io/2021/01/17/leetcode%E5%91%A8%E8%B5%9B/leetcode%E5%91%A8%E8%B5%9B-weekly-contest-224/</id>
+    <published>2021-01-17T07:41:56.000Z</published>
+    <updated>2021-01-17T08:03:20.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>本周大失败🤦‍，只做出来两题，还是太菜了</p><p><img src="https://i.loli.net/2021/01/17/uypFAt2sKHUPkOx.png" alt="" /></p><p><img src="https://i.loli.net/2021/01/17/yamZ3XLv6wSxG2k.png" alt="" /></p><h3 id="可以形成最大正方形的矩形数目"><a class="markdownIt-Anchor" href="#可以形成最大正方形的矩形数目"></a> <a href="https://leetcode-cn.com/problems/number-of-rectangles-that-can-form-the-largest-square/">可以形成最大正方形的矩形数目</a></h3><h4 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h4><p><img src="https://i.loli.net/2021/01/17/HgYurdvFPLhNO9y.png" alt="" /></p><h4 id="做法"><a class="markdownIt-Anchor" href="#做法"></a> 做法</h4><p>遍历所有正方形维护最大边长即可</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">countGoodRectangles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; rectangles)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxLen = <span class="number">0</span>, num = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; rect : rectangles) &#123;</span><br><span class="line">            <span class="keyword">int</span> cur = min(rect[<span class="number">0</span>], rect[<span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">if</span>(cur &gt; maxLen) &#123;</span><br><span class="line">                maxLen = cur;</span><br><span class="line">                num = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(cur == maxLen) &#123;</span><br><span class="line">                num++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/17/soyOR7SzYi8tlQ3.png" alt="" /></p><h3 id="同积元组"><a class="markdownIt-Anchor" href="#同积元组"></a> <a href="https://leetcode-cn.com/problems/tuple-with-same-product/">同积元组</a></h3><h4 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h4><p><img src="https://i.loli.net/2021/01/17/xpkHBhCFiMbt8J1.png" alt="" /></p><h4 id="做法-2"><a class="markdownIt-Anchor" href="#做法-2"></a> 做法</h4><p>简单的排列组合，首先处理出所有的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>∗</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo>[</mo><mi>j</mi><mo>]</mo><mo>(</mo><mi>i</mi><mo>≠</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">nums[i] * nums[j](i \ne j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mbin">∗</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mopen">(</span><span class="mord mathit">i</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>，对数量大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span></span></span></span>的乘积，可以组成的同积元组有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mn>2</mn></msubsup><mo>×</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">C_n^2 \times 8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="vlist"><span style="top:0.247em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">×</span><span class="mord mathrm">8</span></span></span></span>个，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">C_n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.061108em;vertical-align:-0.247em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="vlist"><span style="top:0.247em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>是从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>∗</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo>[</mo><mi>j</mi><mo>]</mo><mo>(</mo><mi>i</mi><mo>≠</mo><mi>j</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">nums[i] * nums[j](i \ne j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mbin">∗</span><span class="mord mathit">n</span><span class="mord mathit">u</span><span class="mord mathit">m</span><span class="mord mathit">s</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mopen">(</span><span class="mord mathit">i</span><span class="mrel">≠</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>中选出两对，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">8</span></span></span></span>是对这两对排列的方法</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">tupleSameProduct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; h;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                h[nums[i] * nums[j]]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> p : h) &#123;</span><br><span class="line">            <span class="keyword">if</span>(p.second &gt; <span class="number">1</span>)</span><br><span class="line">                ans += (p.second * (p.second - <span class="number">1</span>)) * <span class="number">4</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/17/4veBpJ8Ld7qX9mz.png" alt="" /></p><h3 id="重新排列后的最大子矩阵"><a class="markdownIt-Anchor" href="#重新排列后的最大子矩阵"></a> <a href="https://leetcode-cn.com/problems/largest-submatrix-with-rearrangements/">重新排列后的最大子矩阵</a></h3><h4 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h4><p><img src="https://i.loli.net/2021/01/17/quprKAmyo6Li3fa.png" alt="" /></p><h4 id="做法-3"><a class="markdownIt-Anchor" href="#做法-3"></a> 做法</h4><p>这题比赛的时候没有做出来🤦‍，主要思想就是固定一维，然后枚举另一维，因为行不能变动，所以我们枚举每一行，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">c[i][j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mopen">[</span><span class="mord mathit">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>表示第<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>行<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span>列之前有几个连续的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>，然后对所有的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>[</mo><mi>k</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo separator="true">,</mo><mtext> </mtext><mn>0</mn><mo>≤</mo><mi>k</mi><mo>&lt;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">c[k][j],\ 0 \le k \lt m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathit" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mspace"> </span><span class="mord mathrm">0</span><span class="mrel">≤</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">&lt;</span><span class="mord mathit">m</span></span></span></span>从大到小排序，就可以计算出所有的子矩阵面积，维护最大的即可</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">largestSubmatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; a)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n = a.size();</span><br><span class="line"><span class="keyword">int</span> m = a[<span class="number">0</span>].size();</span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">c</span><span class="params">(m)</span></span>;</span><br><span class="line"><span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">c[j] = (a[i][j] ? c[j] + <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp = c;</span><br><span class="line">sort(tmp.begin(), tmp.end(), [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b) &#123;</span><br><span class="line">                <span class="keyword">return</span> a &gt; b;</span><br><span class="line">            &#125;);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">ans = max(ans, (j + <span class="number">1</span>) * tmp[j]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/17/pdSnAbO3j27Tiul.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>(</mo><mi>m</mi><mo>+</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>m</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n(m + logm))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">m</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">m</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p><h3 id="猫和老鼠-ii"><a class="markdownIt-Anchor" href="#猫和老鼠-ii"></a> <a href="https://leetcode-cn.com/problems/cat-and-mouse-ii/">猫和老鼠 II</a></h3><h4 id="题意-4"><a class="markdownIt-Anchor" href="#题意-4"></a> 题意</h4><p><img src="https://i.loli.net/2021/01/17/qAiBoERI872ltpj.png" alt="" /></p><h4 id="做法-4"><a class="markdownIt-Anchor" href="#做法-4"></a> 做法</h4><p>显然是一道记忆化搜索的题目，状态是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>c</mi><mi>a</mi><mi>t</mi><mi mathvariant="normal">_</mi><mi>p</mi><mi>o</mi><mi>s</mi><mo separator="true">,</mo><mi>m</mi><mi>o</mi><mi>u</mi><mi>s</mi><mi>e</mi><mi mathvariant="normal">_</mi><mi>p</mi><mi>o</mi><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mo separator="true">,</mo><mi>s</mi><mi>t</mi><mi>e</mi><mi>p</mi><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(cat\_pos, mouse\_pos, turn, steps)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.06em;vertical-align:-0.31em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">c</span><span class="mord mathit">a</span><span class="mord mathit">t</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">p</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mord mathit">o</span><span class="mord mathit">u</span><span class="mord mathit">s</span><span class="mord mathit">e</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">p</span><span class="mord mathit">o</span><span class="mord mathit">s</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mord mathit">u</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">n</span><span class="mpunct">,</span><span class="mord mathit">s</span><span class="mord mathit">t</span><span class="mord mathit">e</span><span class="mord mathit">p</span><span class="mord mathit">s</span><span class="mclose">)</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">turn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span><span class="mord mathit">u</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">n</span></span></span></span>表示轮到谁走了，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>t</mi><mi>e</mi><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">steps</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">t</span><span class="mord mathit">e</span><span class="mord mathit">p</span><span class="mord mathit">s</span></span></span></span>表示走了几步，记忆化搜索即可，题目不难，没时间写了</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> encode(x, y) (x * cols + y)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> mouse 0</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> cat 1</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> dir[<span class="number">4</span>][<span class="number">2</span>] = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">-1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">0</span>, <span class="number">-1</span>&#125;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">canMouseWin</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; grid, <span class="keyword">int</span> catJump, <span class="keyword">int</span> mouseJump)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rows = grid.size();</span><br><span class="line">        <span class="keyword">int</span> cols = grid[<span class="number">0</span>].size(); </span><br><span class="line"></span><br><span class="line">        <span class="built_in">memset</span>(win_or_lose, <span class="number">-1</span>, <span class="keyword">sizeof</span>(win_or_lose));</span><br><span class="line"></span><br><span class="line">        function&lt;<span class="keyword">bool</span>(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>)&gt; dfs = [&amp;](<span class="keyword">int</span> cx, <span class="keyword">int</span> cy, <span class="keyword">int</span> mx, <span class="keyword">int</span> my, <span class="keyword">int</span> turn, <span class="keyword">int</span> steps) &#123;</span><br><span class="line">            <span class="keyword">if</span>(win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] != <span class="number">-1</span>)</span><br><span class="line">                <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps];</span><br><span class="line">            <span class="keyword">if</span>(steps &gt; rows * cols + <span class="number">2</span>)</span><br><span class="line">                <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(turn == cat &amp;&amp; grid[cx][cy] == <span class="string">&#x27;F&#x27;</span>)</span><br><span class="line">                <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(turn == mouse &amp;&amp; grid[mx][my] == <span class="string">&#x27;F&#x27;</span>)</span><br><span class="line">                <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(cx == mx &amp;&amp; cy == my)</span><br><span class="line">                <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] = turn == cat ? <span class="literal">true</span> : <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">bool</span> ret = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(turn == mouse) &#123;</span><br><span class="line">                <span class="keyword">if</span>(dfs(cx, cy, mx, my, <span class="number">1</span> - turn, steps) == <span class="literal">false</span>) &#123;</span><br><span class="line">                    ret = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [dx, dy] : dir) &#123;</span><br><span class="line">                        <span class="keyword">int</span> bx = mx, by = my;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> s = <span class="number">1</span>; s &lt;= mouseJump; ++s) &#123;</span><br><span class="line">                            bx += dx, by += dy;</span><br><span class="line">                            <span class="keyword">if</span>(bx &lt; <span class="number">0</span> || bx &gt;= rows || by &lt; <span class="number">0</span> || by &gt;= cols || grid[bx][by] == <span class="string">&#x27;#&#x27;</span>)</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">if</span>(dfs(cx, cy, bx, by, <span class="number">1</span> - turn, steps) == <span class="literal">false</span>) &#123;</span><br><span class="line">                                ret = <span class="literal">true</span>;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">if</span>(ret)</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(dfs(cx, cy, mx, my, <span class="number">1</span> - turn, steps + <span class="number">1</span>) == <span class="literal">false</span>) &#123;</span><br><span class="line">                    ret = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [dx, dy] : dir) &#123;</span><br><span class="line">                        <span class="keyword">int</span> bx = cx, by = cy;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> s = <span class="number">1</span>; s &lt;= catJump; ++s) &#123;</span><br><span class="line">                            bx += dx, by += dy;</span><br><span class="line">                            <span class="keyword">if</span>(bx &lt; <span class="number">0</span> || bx &gt;= rows || by &lt; <span class="number">0</span> || by &gt;= cols || grid[bx][by] == <span class="string">&#x27;#&#x27;</span>)</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            <span class="keyword">if</span>(dfs(bx, by, mx, my, <span class="number">1</span> - turn, steps + <span class="number">1</span>) == <span class="literal">false</span>) &#123;</span><br><span class="line">                                ret = <span class="literal">true</span>;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">if</span>(ret)</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> win_or_lose[encode(cx, cy)][encode(mx, my)][turn][steps] = ret;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> cx, cy, mx, my;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; ++i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; ++j)</span><br><span class="line">                <span class="keyword">if</span>(grid[i][j] == <span class="string">&#x27;C&#x27;</span>)</span><br><span class="line">                    cx = i, cy = j;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(grid[i][j] == <span class="string">&#x27;M&#x27;</span>)</span><br><span class="line">                    mx = i, my = j;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dfs(cx, cy, mx, my, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> win_or_lose[<span class="number">64</span>][<span class="number">64</span>][<span class="number">2</span>][<span class="number">502</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/17/aB2b9tjWLcvOAKE.png" alt="" /></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本周大失败🤦‍，只做出来两题，还是太菜了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/01/17/uypFAt2sKHUPkOx.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
+    
+    
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
+    <category term="贪心" scheme="https://christopherlaau.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="记忆化搜索" scheme="https://christopherlaau.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="组合数学" scheme="https://christopherlaau.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一道leetcode-online-majority-element-in-subarray</title>
@@ -35,13 +71,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="线段树" scheme="https://christopherlaau.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    <category term="线段树" scheme="https://christopherlaau.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="分块" scheme="https://christopherlaau.github.io/tags/%E5%88%86%E5%9D%97/"/>
     
@@ -68,11 +104,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="并查集" scheme="https://christopherlaau.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
@@ -97,11 +133,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="搜索" scheme="https://christopherlaau.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
     
@@ -126,13 +162,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="数学" scheme="https://christopherlaau.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -161,15 +197,15 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    <category term="组合数学" scheme="https://christopherlaau.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
     <category term="树" scheme="https://christopherlaau.github.io/tags/%E6%A0%91/"/>
-    
-    <category term="组合数学" scheme="https://christopherlaau.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -192,11 +228,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="图" scheme="https://christopherlaau.github.io/tags/%E5%9B%BE/"/>
     
@@ -223,13 +259,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -252,11 +288,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="字符串" scheme="https://christopherlaau.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -283,11 +319,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="图" scheme="https://christopherlaau.github.io/tags/%E5%9B%BE/"/>
     
@@ -314,15 +350,15 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="图" scheme="https://christopherlaau.github.io/tags/%E5%9B%BE/"/>
+    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
     
     <category term="搜索" scheme="https://christopherlaau.github.io/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="图" scheme="https://christopherlaau.github.io/tags/%E5%9B%BE/"/>
     
     <category term="并查集" scheme="https://christopherlaau.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
@@ -347,13 +383,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
     <category term="记忆化搜索" scheme="https://christopherlaau.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/"/>
     
@@ -378,13 +414,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -407,11 +443,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="数学" scheme="https://christopherlaau.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -436,13 +472,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
     <category term="贪心" scheme="https://christopherlaau.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="字符串" scheme="https://christopherlaau.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -467,15 +503,15 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="贪心" scheme="https://christopherlaau.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
-    <category term="树状数组" scheme="https://christopherlaau.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    <category term="贪心" scheme="https://christopherlaau.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    <category term="树状数组" scheme="https://christopherlaau.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
     
     <category term="字符串" scheme="https://christopherlaau.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -500,13 +536,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
     
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -529,11 +565,11 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
     
     <category term="数学" scheme="https://christopherlaau.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
@@ -561,19 +597,19 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
+    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    
+    <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="贪心" scheme="https://christopherlaau.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="线段树" scheme="https://christopherlaau.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="C++" scheme="https://christopherlaau.github.io/tags/C/"/>
+    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
     
-    <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="线段树" scheme="https://christopherlaau.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
     <category term="双指针" scheme="https://christopherlaau.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
@@ -604,42 +640,13 @@
     <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
     
     
-    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
-    
-    <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
     <category term="动态规划" scheme="https://christopherlaau.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
-  </entry>
-  
-  <entry>
-    <title>每天一道leetcode-sliding-window-maximum</title>
-    <link href="https://christopherlaau.github.io/2021/01/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sliding-window-maximum/"/>
-    <id>https://christopherlaau.github.io/2021/01/02/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-sliding-window-maximum/</id>
-    <published>2021-01-02T05:53:18.000Z</published>
-    <updated>2021-01-02T05:56:54.374Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h3><h4 id="英文题意"><a class="markdownIt-Anchor" href="#英文题意"></a> 英文题意</h4><p><img src="https://i.loli.net/2021/01/02/d2DsWTkJw9xlXCz.png" alt="" /></p><a id="more"></a><h4 id="中文题意"><a class="markdownIt-Anchor" href="#中文题意"></a> 中文题意</h4><p><img src="https://i.loli.net/2021/01/02/RIPdryQT8msBJul.png" alt="" /></p><h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3><p>单调模板题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxSlidingWindow</span>(<span class="params">self, nums: List[int], k: int</span>) -&gt; List[int]:</span></span><br><span class="line">        n = len(nums)</span><br><span class="line">        que = deque([])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">            <span class="keyword">while</span> len(que) <span class="keyword">and</span> nums[que[<span class="number">-1</span>]] &lt; nums[i]:</span><br><span class="line">                que.pop()</span><br><span class="line">            que.append(i)</span><br><span class="line">        </span><br><span class="line">        ans = [nums[que[<span class="number">0</span>]]]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(k, n):</span><br><span class="line">            <span class="keyword">while</span> len(que) <span class="keyword">and</span> i - que[<span class="number">0</span>] + <span class="number">1</span> &gt; k:</span><br><span class="line">                que.popleft()</span><br><span class="line">            <span class="keyword">while</span> len(que) <span class="keyword">and</span> nums[que[<span class="number">-1</span>]] &lt; nums[i]:</span><br><span class="line">                que.pop()</span><br><span class="line">            que.append(i)</span><br><span class="line">            ans.append(nums[que[<span class="number">0</span>]])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/01/02/Pqy1FakTYjVmRdD.png" alt="" /></p><p>时间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>，空间复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></p>]]></content>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#题意&quot;&gt;&lt;/a&gt; 题意&lt;/h3&gt;
-&lt;h4 id=&quot;英文题意&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#英文题意&quot;&gt;&lt;/a&gt; 英文题意&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/01/02/d2DsWTkJw9xlXCz.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="leetcode" scheme="https://christopherlaau.github.io/categories/leetcode/"/>
-    
-    
-    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
-    
     <category term="算法" scheme="https://christopherlaau.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
     <category term="面试" scheme="https://christopherlaau.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="单调队列" scheme="https://christopherlaau.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/"/>
+    <category term="python" scheme="https://christopherlaau.github.io/tags/python/"/>
     
   </entry>
   
