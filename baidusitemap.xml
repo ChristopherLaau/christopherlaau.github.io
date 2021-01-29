@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://christopherlaau.github.io/2021/01/29/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-reachable-nodes-in-subdivided-graph/</loc>
+    <lastmod>2021-01-29</lastmod>
+  </url>
+  <url>
+    <loc>https://christopherlaau.github.io/2021/01/28/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-race-car/</loc>
+    <lastmod>2021-01-28</lastmod>
+  </url>
+  <url>
+    <loc>https://christopherlaau.github.io/2021/01/26/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode/%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%81%93leetcode-minimum-cost-to-hire-k-workers/</loc>
+    <lastmod>2021-01-26</lastmod>
+  </url>
+  <url>
     <loc>https://christopherlaau.github.io/2021/01/24/leetcode%E5%91%A8%E8%B5%9B/biweekly-contest-44/</loc>
     <lastmod>2021-01-25</lastmod>
   </url>
